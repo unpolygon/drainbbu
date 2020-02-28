@@ -1,5 +1,108 @@
 .Model{
     margin: 64px 25px;
-    background-color: skyblue;
+    //background-color: skyblue;
     height: 40vh;
+    position: relative;
+    
+    .DrainModel{
+        position: absolute;
+        transform: translate(-50%,-50%);
+        left:50%;
+        top:50%;
+        // width:300px;
+        //padding-top: 10%; 
+        //max-width: 300px;
+        //max-height: 180px;
+        width: 60%;
+        height: 33vw;
+        //display: flex;
+        //padding-top: calc(100%*(9/16));
+        object-fit: contain;
+        border: 6px solid black;
+        box-sizing: border-box;
+        border-top: 2px solid transparent;
+        border-radius: 15px;
+        border-top-left-radius: 5 px;
+        border-top-left-radius: 5 px;
+        background-image : url(../asset/Water5.png) ;
+        background-size: 100%; 
+        background-position: 0 0px;
+        background-repeat: repeat-x;
+        animation: animate  10s linear infinite;
+        
+
+    }
+    .Header{
+        display: flex;
+        width: 100%;
+        position: relative;
+        .MotherOfSpace{
+            width: 100%;
+            position: relative;
+            .Space{
+                background-image: linear-gradient( 109.6deg,  rgba(104,183,249,1) 31.3%, rgba(176,248,200,1) 100.2% );
+                width: 95%;
+                height: 3px;
+                position: absolute;
+                top: 50%;
+                // left: 5%;
+            }
+        }
+        .MotherOfCircle{
+            position: relative;
+            width: 15px;
+            padding-left: 5%;
+            .Circle{
+                height: 12px;
+                width: 12px;
+                background-color:rgba(104,183,249,1) ;
+                border-radius: 50%;
+                position: absolute;
+                transform: translate(-50%,-50%);
+                left:50%;
+                top:50%;
+            }
+        }
+        
+    }
+    // h2{
+    //     position: relative;
+    // }
+    // h2:after{
+    //     content: "";
+    //     display: block;
+    //     width: 80%;
+    //     height: 3px;
+    //     background-image: linear-gradient( 109.6deg,  rgba(104,183,249,1) 31.3%, rgba(176,248,200,1) 100.2% );
+    //     position: absolute;
+    //     top: 50%;
+    //     right:0;
+    //     border-radius: 25%
+        
+    // }
+    // h2 span{
+    //     content:"";
+    //     flex: 1 1 auto;
+    //     border-top: 1px solid #000;
+    // }
+
+   
+}
+
+@keyframes animate
+{
+    0%{
+    
+        background-position: 0px 100px;
+    }
+    10%{
+    
+        background-position: 50px 50px;
+    }
+    40%{
+    
+        background-position: 1000px 50px;
+    }
+    
+    
 }

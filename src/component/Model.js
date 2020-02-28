@@ -4,7 +4,18 @@ import '../style/Model.scss';
 const Model = () => {
     return(
         <div className='Model'>
-            Model
+            <div className='Header'>
+                <h2>Model</h2>
+                <div className='MotherOfCircle'>
+                    <div className='Circle'>&nbsp;</div>
+                </div>
+                <div className='MotherOfSpace'>
+                    <div className='Space'></div>
+                </div>
+            </div>
+            <div className='DrainModel'>
+            
+            </div>
         </div>
     );
 }
