@@ -1,0 +1,130 @@
+.ShowValue{
+    height: 75%;
+    background-color: #48dbfb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.ShowValue .coverTimeValue{
+    position: relative;
+    z-index: 2;
+}
+
+.ShowValue .timeValue{
+    font-size: 1.3em;
+}
+
+.ShowValue .unit{
+    font-size: 1em;
+    /* position: absolute;
+    bottom: 0;
+    right: 0; */
+}
+
+.ShowValue .label-number{
+    display: flex;
+    font-size: 0.2em;
+    align-items: center;
+    line-height: 0.2em;
+    position: absolute;
+}
+
+.down{
+    background-color: black;
+    transform: rotate(180deg);
+}
+
+.ShowValue-middle{
+    background-color: #f9ca24;
+    color: black;
+}
+
+.ShowValue-high{
+    background-color: #eb4d4b;
+}
+
+.ShowValue .waterDirection{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    font-size: .5em;
+    color: #f9ca24;
+    transition: ease .3s;
+}
+
+.ShowValue .waterDirection:hover{
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+.ShowValue .waterDirection:active{
+    border-radius: 50px;
+    background: linear-gradient(145deg, #4da7db, #5bc6ff);
+    box-shadow: 30px 30px 60px #489dcf, 
+            -30px -30px 60px #62d5ff;
+}
+
+.ShowValue .water{
+    background: url(../asset/Untitled_Artwork.png);
+    height: 100%;
+    width: 100%;
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 100%;
+    transition: ease 1s;
+    opacity: 0.8;
+}
+
+.ShowValue .cover-label{
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 15%;
+}
+
+.ShowValue .label{
+    position: relative;
+    /* background-color: #ffbe76; */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    right: 0;
+}
+
+.ShowValue .label .label-number{
+    bottom: 0;
+    z-index: 100;
+    overflow: visible;
+    padding: 0.1em;
+    background-color: rgba(0, 0, 0, 0.301);
+    right: 0;
+}
+
+.waterAnimation{
+    animation-name: water;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes water{
+    100%{
+        background-position: 500% 500%;
+    }
+}

@@ -1,0 +1,6 @@
+.SlideValue{
+    margin: 0 20px;
+    height: 25%;
+    display: grid;
+    flex-direction: column;
+}
