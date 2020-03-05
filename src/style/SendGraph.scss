@@ -1,0 +1,44 @@
+@import "~react-datepicker/dist/react-datepicker.css";
+$ruler: 16px;
+$color-red: #AE1100;
+$color-bg: #EBECF0;
+$color-shadow: #BABECC;
+$color-white: #FFF;
+.SendGraph{
+    display: grid;
+    justify-items: center;
+    .Graph{
+        width: 60vw;
+    }
+    .Date-Time{
+        padding: 1em;
+        display: flex;
+        p{
+            border-radius: 10px;
+            box-shadow: -5px -5px 20px $color-white,  5px 5px 20px $color-shadow;
+            padding: 1em;
+            margin: 0 1em; 
+            &:hover {
+                box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+            } 
+            &:active {
+                box-shadow: inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+            }  
+        }
+        // width: 100%;
+        span{
+            padding: 1em;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .SendGraph{
+        height: 100vh;
+        width: 100vw;
+        .Graph{
+            width: 90vw;
+        }
+    }
+    
+}
