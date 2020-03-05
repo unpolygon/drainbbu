@@ -1,0 +1,12 @@
+.cardstatus{
+    width: 60%;
+    height: 20%;
+    margin-left: 60px;
+  }
+.flexrow{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}

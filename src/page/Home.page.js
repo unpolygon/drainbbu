@@ -6,11 +6,11 @@ import '../style/Home.page.scss';
 
 const HomePage = () => {
     return(
-        <div className='Homepage'>
-            {/* <NavBar /> */}
-            <Model />
-            <ControlPanel />
-            
+        <div className='HomePage'>
+            <div className='Content'>
+                <Model />
+                <ControlPanel />
+            </div>
         </div>
     );    
 }

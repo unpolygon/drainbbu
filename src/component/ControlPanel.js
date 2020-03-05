@@ -106,19 +106,13 @@ export default class ControlPanel extends Component {
                     disabled="disabled"
                   />
                 {/* </button> */}
-                <Slider color="#FF4136" hexColor="red" handleUpdateColor={this.handleUpdateColor} />
+                <Slider color="#FF4136" hexColor="red" handleUpdateColor={this.handleUpdateColor} value={this.props.value} />
                 <Slider color="#3D9970" hexColor="green" handleUpdateColor={this.handleUpdateColor} />
               </div>
             </div>
           </Styles>
           <div className="flexrow">
             <StatusButton/>
-            <Card className="cardstatus">
-                <CardBody>
-                  <CardText>A</CardText>
-                  <CardText>B</CardText>
-                </CardBody>
-            </Card>
           </div>
         </div>
       </div>
