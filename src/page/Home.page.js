@@ -10,6 +10,7 @@ const HomePage = () => {
             <NavBar />
             <Model />
             <ControlPanel />
+            
         </div>
     );    
 }
