@@ -1,0 +1,21 @@
+.ResultCard{
+    -webkit-box-shadow: 17px 10px 109px -67px rgba(0,0,0,0.75);
+    -moz-box-shadow: 17px 10px 109px -67px rgba(0,0,0,0.75);
+    box-shadow: 17px 10px 109px -67px rgba(0,0,0,0.75);
+    background-color: white;
+    margin: 10px;
+    height: 15em;
+    width: 30em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+
+@media screen and (max-width: 767px){
+    .ResultCard{
+        width: 90vw;
+        margin: 1em auto;
+    }
+}

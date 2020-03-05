@@ -1,5 +1,89 @@
 .NavBar{
-    // background: linear-gradient(180deg, #65DAE1 17.74%, #F5FCCA 100%);
-    background: grey;
+    background: linear-gradient(180deg, #65DAE1 17.74%, #F5FCCA 100%);
+    box-sizing: border-box;
     height: 6em;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    .Logo{
+        color: green;
+        height: 60px;
+        font-size: 2rem;
+        line-height: 60px;
+        padding: 0 20px;
+        background: grey;
+        text-align: center;
+        box-sizing: border-box;
+        float: left;
+        font-weight: 700;
+        text-decoration: none;
+    }
+    nav{
+        float: right;
+        ul{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            li{
+                list-style: none;
+            }
+            li a{
+                display: block;
+                margin: 1em 0;
+                padding: .5em 1.2em;
+                text-decoration: none;
+                color: black;
+                &.Active ,&:hover{
+                    background-color: #6356e5;
+                    color: white;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+    .Burger{
+        display: none;
+        cursor: pointer;
+        div{
+            width: 1.5em;
+            height: .2em;
+            background-color: white;
+            margin: .2em;
+            transition: all 0.5s ease;
+        }
+    }
+}
+
+@media (max-width: 486px){
+    .NavBar{
+        .Burger{
+            display: block;
+            width: 2.5em;
+            height: 2.5em;
+            margin: 10px;
+            background: #6356e5;
+            float: right;
+            cursor: pointer;
+            text-align: center;
+            font-size: 1.2em;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .toggle .line1{
+            transform: rotate(-45deg) translate(-.4em,.45em);
+        }
+        .toggle .line2{
+            opacity: 0;
+        }
+        .toggle .line3{
+            transform: rotate(45deg) translate(-.4em,-.4em);
+        }
+        nav{
+            display: none;
+        }
+    }
 }

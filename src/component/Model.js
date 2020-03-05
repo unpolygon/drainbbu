@@ -14,7 +14,7 @@ const Model = () => {
                 </div>
             </div>
             <div className='DrainModel'>
-            
+            <div className='Water'>&nbsp;</div>
             </div>
         </div>
     );
