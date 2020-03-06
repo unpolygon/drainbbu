@@ -1,12 +1,22 @@
-.cardstatus{
-    width: 60%;
-    height: 20%;
-    margin-left: 60px;
-  }
+.coverTimeValue{
+  position: relative;
+  z-index: 2;
+  flex-direction: column;
+
+}
+
+.timeValue{
+  font-size: 1em;
+}
 .flexrow{
     display: flex;
     flex-direction: row;
     text-align: center;
     justify-content: center;
     align-items: center;
+    /* margin-top: 50%; */
+}
+.card-text:last-child {
+  margin-bottom: 0;
+  padding: 5px;
 }

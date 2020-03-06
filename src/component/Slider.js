@@ -69,7 +69,7 @@ export default class ControlPanel extends React.Component {
   render() {
     return (
       <Styles opacity={this.state.value > 2 ? (this.state.value / 10) : .2} color={this.props.color}>
-        <input type="range" min={this.props.value ? '0.2' : '0'} max={this.props.value ? '1' : '500'} step= {this.props.value ? '1' : '50'} defaultValue={this.props.value ? '0.2' : '0'} value={this.state.value} className="slider" onChange={this.handleOnChange} />
+        <input type="range" min={this.props.value ? '0.2' : '0'} max={this.props.value ? '1' : '500'} step= {this.props.value ? '1' : '50'} defaultValue={this.props.value ? '0.2' : '0'} handleUpdateSum={this.state.value} handleUpdateV={this.state.value} className="slider" onChange={this.handleOnChange} />
         <div className="value">{this.state.value}</div>
       </Styles>
     )

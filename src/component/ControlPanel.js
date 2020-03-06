@@ -49,26 +49,25 @@ const Styles = styled.div`
   }
 `;
 
+
 export default class ControlPanel extends Component {
 
   state = {
-    color: '000000',
     showCopyText: false,
+    v2 : 0,
+    v1: 0.2,
+    minV1: 0,
+    maxV1 : 0,
+    tMax : 0,
+    tDrain : 0
   }
 
-  handleUpdateColor = (color, value) => {
-    const red = this.state.color.slice(0, 2).toUpperCase();
-    const green = this.state.color.slice(2, 4).toUpperCase();
-    const blue = this.state.color.slice(4, 6).toUpperCase();
-    const hexColor = Number(value).toString(16).padStart(2, '0').toUpperCase();
+  handleUpdateV = (value) => {
+    
+  }
 
-    if (color === 'red') {
-      this.setState({ color: `${hexColor}${green}${blue}` });
-    } else if (color === 'green') {
-      this.setState({ color: `${red}${hexColor}${blue}` });
-    } else {
-      this.setState({ color: `${red}${green}${hexColor}` });
-    }
+  handleUpdateSum = (value) => {
+
   }
 
   toggleShowCopyText = () => {
@@ -106,8 +105,8 @@ export default class ControlPanel extends Component {
                     disabled="disabled"
                   />
                 {/* </button> */}
-                <Slider color="#FF4136" hexColor="red" handleUpdateColor={this.handleUpdateColor} value={this.props.value} />
-                <Slider color="#3D9970" hexColor="green" handleUpdateColor={this.handleUpdateColor} />
+                <Slider color="#FF4136" hexColor="red" handleUpdateV={this.handleUpdateV} />
+                <Slider color="#3D9970" hexColor="green" handleUpdateSum={this.handleUpdateSum} />
               </div>
             </div>
           </Styles>

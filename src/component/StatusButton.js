@@ -1,35 +1,70 @@
-import React from "react";
+import React, {useEffect , useState}from "react";
 import "../style/StatusBT.css";
 import { Container, Button } from 'reactstrap';
 import WaterDown from './WaterDown';
 import { Card, CardText, CardBody, CardHeader } from 'reactstrap';
+import $ from 'jquery';
 
+const StatusButton = (props) => {
+    let v1 = props.v1;
+    let minV1 = props.minV1;
+    let maxV1 = props.maxV1;
+    let v2 = props.v2;
+    let tMax = parseInt(props.tMax);
+    let tDrain = parseInt(props.tDrain);
+    let place = props.place;
+    const [show , setShow] = useState(false);
+    const [chkshow , setChkshow ] = useState(true);
+    let hold = false ; 
+    let col = '' ;
+    
 
-export default class statusButton extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { show: false, chkshow: true, hold: false, col: '' };
+    const ToggleDiv = () => {
+        $(document).ready(() => {
+            setShow(!show)
+            setChkshow(!chkshow)
+            // console.log(chkshow);
+            console.log(props.tDrain);
+            if(!show){
+                let timeValuetMax = document.getElementById('tMax');
+                timeValuetMax.innerHTML = props.tMax.toFixed(2);
+            }
+            else if(show){
+                let timeValuetDrain = document.getElementById('tDrain');
+                timeValuetDrain.innerHTML = props.tDrain.toFixed(2);
+                
+            }
+        })
+      
     }
-
-    toggleDiv = () => {
-        const { show, chkshow } = this.state;
-        this.setState({ show: !show, chkshow: !chkshow })
-    }
-
-    render() {
+    
         return (
             <div>
-                {this.state.chkshow && <div><Button color="danger" onClick={this.toggleDiv}>water up</Button></div>}
-                    <div className="flexrow">
-                        {this.state.show && <WaterDown />}
-                        {this.state.show && 
-                        <Card className="cardstatus">
-                        <CardBody>
-                            <CardText>เวลาที่ฝนตกจนทำให้น้ำเต็มตลิ่ง : 10 min</CardText>
-                        </CardBody>
-                        </Card>}
+                {chkshow && <Button style={{background: "#668DBB", boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"}} onClick={ToggleDiv}>water up</Button>}
+                        {show && <Button color = "danger" style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"}} onClick={ToggleDiv}>water down</Button>}
+
+                        {show && 
+                        <Card style={{marginTop:"2%"}}>
+                            <CardText>เวลาที่ฝนตกจนน้ำเต็มตลิ่ง : </CardText>
+                            <div className='coverTimeValue'>
+                                {show && <span id = "tMax" className='timeValue'>0.5</span>}
+                                {chkshow && <span id = "tDrain" className='timeValue'>0.5</span>}
+                                <span className='unit'>s</span>
+                            </div>
+                        </Card>
+                        }
+                        {chkshow && 
+                        <Card style={{marginTop:"2%"}}>
+                            <CardText>เวลาที่ฝนตกจนน้ำเต็มตลิ่ง : </CardText>
+                            <div className='coverTimeValue'>
+                                {show && <span id = "tMax" className='timeValue'>0.5</span>}
+                                {chkshow && <span id = "tDrain" className='timeValue'>0.5</span>}
+                                <span className='unit'>s</span>
+                            </div>
+                        </Card>
+                        }
                 </div>
-            </div>
         );
-    }
 }
+
+export default StatusButton;
