@@ -3,7 +3,6 @@ import SlideValue from './SlideValue';
 import '../style/ResultCard.css';
 // import ShowValue from './ShowValue.component';
 import StatusButton from '../component/StatusButton';
-import WaterDown from '../component/WaterDown';
 import $ from 'jquery';
 
 const ResultCard = (props) => {

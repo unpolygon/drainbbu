@@ -1,7 +1,6 @@
 import React, {useEffect , useState}from "react";
 import "../style/StatusBT.css";
 import { Container, Button } from 'reactstrap';
-import WaterDown from './WaterDown';
 import { Card, CardText, CardBody, CardHeader } from 'reactstrap';
 import $ from 'jquery';
 
