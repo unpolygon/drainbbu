@@ -1,3 +1,21 @@
+.StatusButton{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  /* font-size: 1.7vw; */
+  
+}
+.setCard{
+  display : flex ;
+  flex-direction: row ;
+  border: 1px solid #828282;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: .2em;
+}
 .coverTimeValue{
   position: relative;
   z-index: 2;
@@ -6,7 +24,7 @@
 }
 
 .timeValue{
-  font-size: 1em;
+  /* font-size: 1em; */
 }
 .flexrow{
     display: flex;

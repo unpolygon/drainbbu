@@ -1,7 +1,6 @@
 import React, {useEffect , useState}from "react";
 import "../style/StatusBT.css";
 import { Container, Button } from 'reactstrap';
-import { Card, CardText, CardBody, CardHeader } from 'reactstrap';
 import $ from 'jquery';
 
 const StatusButton = (props) => {
@@ -38,29 +37,31 @@ const StatusButton = (props) => {
     }
     
         return (
-            <div>
-                {chkshow && <Button style={{background: "#668DBB", boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"}} onClick={ToggleDiv}>water up</Button>}
+            <div className="StatusButton">
+                {chkshow && <Button style={{background: "#668DBB", boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }} onClick={ToggleDiv}>water up</Button>}
                         {show && <Button color = "danger" style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"}} onClick={ToggleDiv}>water down</Button>}
-
+                        &nbsp;
                         {show && 
-                        <Card style={{marginTop:"2%"}}>
-                            <CardText>เวลาที่ฝนตกจนน้ำเต็มตลิ่ง : </CardText>
+                        <div className = "setCard">
+                            <div>เวลาที่ฝนตกจนน้ำเต็มตลิ่ง : </div>
+                            &nbsp;
                             <div className='coverTimeValue'>
                                 {show && <span id = "tMax" className='timeValue'>0.5</span>}
                                 {chkshow && <span id = "tDrain" className='timeValue'>0.5</span>}
-                                <span className='unit'>s</span>
+                                <span className='unit'> s</span>
                             </div>
-                        </Card>
+                        </div>
                         }
                         {chkshow && 
-                        <Card style={{marginTop:"2%"}}>
-                            <CardText>เวลาที่ฝนตกจนน้ำเต็มตลิ่ง : </CardText>
+                        <div className = "setCard">
+                            <div>เวลาที่ระบายน้ำจนเสร็จ :</div>
+                            &nbsp;
                             <div className='coverTimeValue'>
                                 {show && <span id = "tMax" className='timeValue'>0.5</span>}
                                 {chkshow && <span id = "tDrain" className='timeValue'>0.5</span>}
-                                <span className='unit'>s</span>
+                                <span className='unit'> s</span>
                             </div>
-                        </Card>
+                        </div>
                         }
                 </div>
         );

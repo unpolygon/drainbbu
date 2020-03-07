@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from 'react';
 // import NavBar from '../component/NavBar';
 import Model from '../component/Model';
-import ControlPanel from '../component/ControlPanel';
+// import ControlPanel from '../component/ControlPanel';
 import Scoller from '../component/Scoller'
 import ResultCard from '../component/ResultCard'
 import '../style/Home.page.scss';

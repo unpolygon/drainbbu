@@ -5,11 +5,12 @@ import $ from 'jquery';
 const Scoller = (props) => {
 
     const handleOnChange = (e) =>{
+        console.log(props.v1,props.sumTimeMax);
         $(e.target).closest('div').find('span[id=value]').text(e.target.value);
         if(props.v1){
-            props.v1(e.target.value);
-            props.maxV1(e.target.max);
             props.minV1(e.target.min);
+            props.maxV1(e.target.max);
+            props.v1(e.target.value);
         }else if(props.sumTimeMax){
             props.sumTimeMax(e.target.value)
         }

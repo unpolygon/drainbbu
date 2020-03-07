@@ -12,6 +12,7 @@ const SlideValue = (props) => {
     props.formularV2(v1,sumTimeMax);
     props.maxV1(maxV1);
     props.minV1(minV1);
+    console.log(v1,'Slide Value');
   });
 
   const callBackV1 = (v1) => {

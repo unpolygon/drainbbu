@@ -28,7 +28,7 @@ const NavBar = () => {
 
     return(
         <div className='NavBar'>
-            <a href = "#" className='Logo'>Logo</a>
+            <a href = "#" className='Logo'>DrainBBU</a>
             <div className='Menu-toggle'></div>
             <nav>
                 <ul>

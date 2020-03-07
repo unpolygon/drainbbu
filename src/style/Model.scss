@@ -2,24 +2,26 @@
     margin: 64px 25px;
     //background-color: skyblue;
     height: 40vh;
+    font-family: 'Prompt', sans-serif;
     position: relative;
-    display: grid;
-    place-items: center;
+    // display: grid;
+    // place-items: center;
     
     
     .DrainModel{
-        
-        // position: absolute;
-        // transform: translate(-50%,-50%);
+        overflow: hidden;
+        position: absolute;
+        transform: translate(-50%,-50%);
         left:50%;
-        top:50%;
+        top:58%;
+        
         // padding: .5em;
         // width:300px;
         //padding-top: 10%; 
         max-width: 600px;
         max-height: 360px;
-        min-width: 300px;
-        min-height: 180px;
+        min-width: 250px;
+        min-height: 150px;
         width: 60%;
         height: calc(33vw/2);
         //display: flex;
@@ -43,17 +45,33 @@
             background-position: 0 0px;
             background-repeat: repeat-x;
             animation: animate  10s linear infinite;
-            .Frame{
-                width: 100%;
-                height: 100%;
-                background-image : url(../asset/Frame.png) ;
-                background-size: 100%; 
-                background-position: 0 0px;
-                //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                -webkit-box-shadow: -6px 45px 57px -35px rgba(0,0,0,0.61);
-                -moz-box-shadow: -6px 45px 57px -35px rgba(0,0,0,0.61);
-                box-shadow: -6px 45px 57px -35px rgba(0,0,0,0.61);
-            }
+        }
+        .coverFrame{
+            height: 100%;
+            width: 100%;
+
+        }
+        img{
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%; 
+        }
+        .Frame{
+            position: absolute;
+            top: -100%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            // background-image : url(../asset/Frame.png) ;
+            // background-size: 100%; 
+            // background-position: 0 0px;
+            // background-repeat: no-repeat;
+            //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-box-shadow: -6px 45px 57px -35px rgba(0,0,0,0.61);
+            -moz-box-shadow: -6px 45px 57px -35px rgba(0,0,0,0.61);
+            box-shadow: -6px 45px 57px -35px rgba(0,0,0,0.61);
         }
        
         
@@ -120,16 +138,13 @@
 {
     0%{
     
-        background-position: 0px 100px;
+        background-position: 0px 0px;
     }
-    10%{
+    100%{
     
-        background-position: 50px 50px;
+        background-position: 2000px 0px;
     }
-    40%{
-    
-        background-position: 1000px 50px;
-    }
+   
     
     
 }

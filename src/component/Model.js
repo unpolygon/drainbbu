@@ -1,7 +1,7 @@
 import React, {useEffect , useState} from 'react';
 import '../style/Model.scss';
 import $ from 'jquery';
-
+import hee from '../asset/Frame.png';
 
 const Model = (props) => {
     let v1 = props.v1;
@@ -17,7 +17,8 @@ const Model = (props) => {
     let col = '' ;
     useEffect(() => {
         let divPlace = $('div[place='+place+']'); 
-        let water = divPlace.find('div[class=water]');
+        // let water = divPlace.find('div[class=Water]');
+        let water = $('div[class^=Water]');
         let label = divPlace.find('div[class=cover-label]').find('div[class=label]');
         let labelNumber = label.find('span[class*=label-number]');
         if(v1){
@@ -28,8 +29,10 @@ const Model = (props) => {
             if(pos <= 0 || pos == Infinity) pos = 0;
             else if(pos > 87) pos = 87;
             $(document).ready(() => {
+                console.log('Intouch')
                 labelNumber.css('bottom',pos+'%');
                 water.css({'top':`${100-waterpos}%`,'transition-duration': '1s'});
+                water.addClass('hee');
             });
             // console.log('height: ',water.height());
             // console.log('height: ',minV1);
@@ -45,7 +48,7 @@ const Model = (props) => {
                 labelNumber.removeClass('ShowValue-high');
             }
         })
-        console.log('v2 ',v2);
+        console.log('v2-wtf ',v2);
     });
     return(
         <div className='Model'>
@@ -59,7 +62,13 @@ const Model = (props) => {
                 </div>
             </div>
             <div className='DrainModel'>
-            <div className='Water'><div className='Frame'></div></div>
+            {/* <div className='Water'><div className='Frame'></div></div> */}
+            <div className='Water'></div>
+            <img src={hee} alt="Smiley face" height="100%" width="100%" />
+            {/* <div className='Water'></div>
+            <div className='coverFrame'>
+                <div className='Frame'></div>
+            </div> */}
             
             </div>
         </div>

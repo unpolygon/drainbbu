@@ -3,6 +3,7 @@
     .Content{
         display: flex;
         flex-direction: row;
+        flex: auto;
         > div{
             flex: 1;
         }
@@ -13,6 +14,11 @@
     .HomePage{
         .Content{
             flex-direction: column;
+            > div{
+                flex: auto;
+            }
         }
+            
+        
     }
 }
