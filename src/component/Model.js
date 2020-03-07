@@ -1,7 +1,7 @@
 import React, {useEffect , useState} from 'react';
 import '../style/Model.scss';
 import $ from 'jquery';
-import hee from '../asset/Frame.png';
+import FrameDam from '../asset/Frame.png';
 
 const Model = (props) => {
     let v1 = props.v1;
@@ -64,7 +64,7 @@ const Model = (props) => {
             <div className='DrainModel'>
             {/* <div className='Water'><div className='Frame'></div></div> */}
             <div className='Water'></div>
-            <img src={hee} alt="Smiley face" height="100%" width="100%" />
+            <img src={FrameDam} alt="Smiley face" height="100%" width="100%" />
             {/* <div className='Water'></div>
             <div className='coverFrame'>
                 <div className='Frame'></div>
