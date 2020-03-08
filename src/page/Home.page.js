@@ -13,6 +13,7 @@ const HomePage = (props) => {
     const [minV1,setMinV1] = useState(0);
     const [maxV1,setMaxV1] = useState(0);
     const [v2,setV2] = useState(0)
+    const [chkshow,setChkshow] = useState(props.chkshow);
     // let v1 = props.v1;
     // let minV1 = props.minV1;
     // let maxV1 = props.maxV1;
@@ -35,6 +36,10 @@ const HomePage = (props) => {
       const callBackMinV1 = (minV1) => {
         setMinV1(minV1);
       }
+      const callBackchkshow = (chkshow) => {
+        setChkshow(chkshow);
+        console.log({chkshow});
+    }
     
     // const handleOnChange = (e) =>{
     //     props.v1(e.target.v1);
@@ -50,12 +55,13 @@ const HomePage = (props) => {
                 maxV1={maxV1}
                 minV1={minV1}
                 v2={v2} 
+                chkshow={chkshow}
                 // place={props.place}
                 />
                 {/* <ControlPanel /> */}
                 {/* <Scoller/> */}
                 <ResultCard
-                 v1={callBackV1} maxV1={callBackMaxV1} minV1={callBackMinV1} v2={callBackV2}
+                 v1={callBackV1} maxV1={callBackMaxV1} minV1={callBackMinV1} v2={callBackV2} chkshow={callBackchkshow}
                     // onChange={handleOnChange} 
                     // v1={v1}
                     // maxV1={maxV1}

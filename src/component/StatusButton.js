@@ -16,25 +16,39 @@ const StatusButton = (props) => {
     let hold = false ; 
     let col = '' ;
     
+    const callBackchkshow = (chkshow) => {
+        setChkshow(chkshow);
+        props.chkshow(chkshow);
+        console.log("StatusBT_chkshow : ",chkshow);
+    }
 
     const ToggleDiv = () => {
+        callBackchkshow(chkshow)
         $(document).ready(() => {
             setShow(!show)
             setChkshow(!chkshow)
-            // console.log(chkshow);
-            console.log(props.tDrain);
+            
+            // console.log(props.tDrain);
             if(!show){
                 let timeValuetMax = document.getElementById('tMax');
                 timeValuetMax.innerHTML = props.tMax.toFixed(2);
+                console.log('chkshow',chkshow);
+                console.log('show',show);
             }
             else if(show){
                 let timeValuetDrain = document.getElementById('tDrain');
                 timeValuetDrain.innerHTML = props.tDrain.toFixed(2);
-                
+                console.log('chkshow',chkshow);
+                console.log('show',show);   
             }
-        })
-      
+        })  
     }
+    // const callBackchkshow = (chkshow) => {
+    //     setChkshow(chkshow);
+    //     props.chkshow(chkshow)
+    //     console.log("StatusBT_chkshow : ",chkshow);
+    // }
+
     
         return (
             <div className="StatusButton">

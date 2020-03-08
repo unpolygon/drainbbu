@@ -13,9 +13,9 @@ const ResultCard = (props) => {
     const [maxV1,setMaxV1] = useState(0);
     const [tMax,setTMax] = useState(0);
     const [tDrain,setTDrain] = useState(0);
-    const [chkTrue,setChkTrue] = useState(true);
-    const [chkFalse,setChkFalse] = useState(false);
-    console.log({v1});
+    const [chkshow,setChkshow] = useState(false);
+    // const [chkFalse,setChkFalse] = useState(false);
+    // console.log({v1});
 
     useEffect(() => {
         
@@ -55,11 +55,17 @@ const ResultCard = (props) => {
         setMaxV1(maxV1);
         console.log(maxV1);
       }
-      const callBackMinV1 = (minV1) => {
+    const callBackMinV1 = (minV1) => {
         setMinV1(minV1);
-        props.minV1(minV1)
+    props.minV1(minV1)
 
-      }
+    }
+    const callBackchkshow = (chkshow) => {
+        setChkshow(chkshow);
+        props.chkshow(chkshow)
+        console.log("Res_chkshow : ",chkshow);
+    }
+
 
     return(
         <div className='Controltxt'>
@@ -76,7 +82,9 @@ const ResultCard = (props) => {
                     <SlideValue 
                         formularV2={formularV2}
                         minV1 = {callBackMinV1}
-                        maxV1 = {callBackMaxV1}/>
+                        maxV1 = {callBackMaxV1}
+                        chkshow={chkshow}
+                        />
                     <StatusButton 
                     v1={v1}
                     maxV1={maxV1}
@@ -85,6 +93,7 @@ const ResultCard = (props) => {
                     tMax={tMax}
                     tDrain={tDrain}
                     place={props.place}
+                    chkshow={callBackchkshow}
                     />
                 </div>
         </div>
