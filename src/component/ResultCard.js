@@ -95,6 +95,7 @@ const ResultCard = (props) => {
                     place={props.place}
                     chkshow={callBackchkshow}
                     />
+                     &nbsp;
                 </div>
         </div>
     );

@@ -77,7 +77,9 @@ const StatusButton = (props) => {
                             </div>
                         </div>
                         }
-                </div>
+            
+            <div>&nbsp;</div>
+            </div>
         );
 }
 
