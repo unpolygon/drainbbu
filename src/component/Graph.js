@@ -1,41 +1,36 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import {Bar, Line, Pie} from 'react-chartjs-2';
 
-class Graph extends Component{
-  constructor(props){
-    super(props);
-    this.state = {
-      chartData:props.chartData
-    }
-  }
+const Graph = (props) => {
+  const [chartData,setChartData] = useState(props.chartData);
 
-  static defaultProps = {
+  Graph.defaultProps = {
     displayTitle:true,
     displayLegend: true,
     legendPosition:'right',
     location:'City'
   }
-
-  render(){
+    console.log(props.chartData);
+    // console.log(this.state.chartData);
+    // console.log(this.state.hello);
     return (
       <div className="Graph">
         <Line
-          data={this.state.chartData}
+          data={props.chartData}
           options={{
             title:{
-              display:this.props.displayTitle,
-              text:'Largest Cities In '+this.props.location,
+              display:props.displayTitle,
+              text:'Largest Cities In '+props.location,
               fontSize:25
             },
             legend:{
-              display:this.props.displayLegend,
-              position:this.props.legendPosition
+              display:props.displayLegend,
+              position:props.legendPosition
             }
           }}
         />
       </div>
     )
-  }
 }
 
 export default Graph;
