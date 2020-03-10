@@ -17,16 +17,25 @@ const Scoller = (props) => {
     }
  
     return(
+        // <div>
         <div className='Scoller'>
-            {/* <span className='title'>{props.v1 ? 'v1' : 'sumTimeMax'}</span> */}
             <input type='range' 
                 onChange={handleOnChange} 
                 min ={props.v1 ? '0.2' : '0'} 
                 max ={props.v1 ? '1' : '500'} 
                 step= {props.v1 ? '0.1' : '25'} 
-                defaultValue={props.v1 ? '0.2' : '0'}/>
-            <span id='value'>{props.v1 ? '0.2' : '0'}</span>
+                defaultValue={props.v1 ? '0.2' : '0'}
+                list="ticks"
+                />
+            <datalist id="ticks">
+                <option>0.4</option>
+                <option>0.6</option>
+                <option>0.9</option>
+            </datalist>
+            <span id='value' className="markvalue">{props.v1 ? '0.2' : '0'}</span>
         </div>
+
+        
     );
 }
 

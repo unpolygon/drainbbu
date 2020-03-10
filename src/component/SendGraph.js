@@ -2,10 +2,15 @@ import React, { useState,useEffect} from 'react';
 import '../style/SendGraph.scss';
 import Graph from './Graph';
 import DateTime from './DateTime';
+import SplitButton from './SplitButton';
+import Button from '@material-ui/core/Button';
+import Icon from '@material-ui/core/Icon';
+import SaveIcon from '@material-ui/icons/Save';
 import axios from 'axios';
 
 const SendGraph = () => {
   var tzoffset = (new Date()).getTimezoneOffset() * 60000;
+  const [options, setOptions] = useState(['WlGraph','RlGraph','QGraph']);
   const [chartData,setChartData] = useState({});
   const [labels, setLabels] = useState([]); 
   const [backgroundColor,setBackgroundColor] = useState([
@@ -102,7 +107,6 @@ const SendGraph = () => {
     axios.get('http://localhost:5000/WlGraph/',config)
     .then(response => {
       if(response.data.length > 0){
-        // console.log(response);
         setChartData({
           labels: response.data.map(each => [each.date.split('-')[2],each.time]),
           datasets:[{
@@ -118,15 +122,28 @@ const SendGraph = () => {
     return (
       <div className="SendGraph">
         <div className='ButtonGraph'>
-                <span>FROM: </span><DateTime From={onChangeFrom}/>
-                <span>TO: </span><DateTime To={onChangeTo}/>
-                <button onClick={getChartData}>Graph</button>
-                <label for="graphs">Choose your grpah:</label>
-                <select id="graphs">
+                <div className='From'>
+                  <span>FROM: </span><DateTime From={onChangeFrom}/>
+                </div>
+                <div className='To'>
+                  <span>TO: </span><DateTime To={onChangeTo}/>
+                </div>
+                {/* <button onClick={getChartData}>Graph</button> */}
+                <Button
+                variant="contained"
+                color="primary"
+                onClick={getChartData}
+                endIcon={<Icon>send</Icon>}
+                >
+                  Send
+                </Button>
+                {/* <label for="graphs">Choose your grpah:</label> */}
+                {/* <select id="graphs">
                   <option value="WlGraph">WlGraph</option>
                   <option value="RlGraph">RlGraph</option>
                   <option value="QGraph">QGraph</option>
-                </select>
+                </select> */}
+                <SplitButton options={options}/>
         </div>
         <Graph 
           chartData={chartData} 

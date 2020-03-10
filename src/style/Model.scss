@@ -4,9 +4,8 @@
     height: 40vh;
     font-family: 'Prompt', sans-serif;
     position: relative;
-    display: block;
+    //display: block;
     // place-items: center;
-    
     
     .DrainModel{
         overflow: hidden;
@@ -17,7 +16,7 @@
         
         // padding: .5em;
         // width:300px;
-        //padding-top: 10%; 
+        // padding-top: 10%; 
         max-width: 600px;
         max-height: 360px;
         min-width: 250px;
