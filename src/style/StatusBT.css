@@ -1,0 +1,65 @@
+.StatusButton{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  /* font-size: 1.7vw; */
+  
+}
+.setCard{
+  display : flex ;
+  flex-direction: row ;
+  border: 1px solid #828282;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: .2em;
+}
+.coverTimeValue{
+  position: relative;
+  z-index: 2;
+  flex-direction: column;
+
+}
+
+.timeValue{
+  /* font-size: 1em; */
+}
+.flexrow{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 50%; */
+}
+.card-text:last-child {
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+@media screen and (max-width: 962px){
+  .StatusButton{
+    flex-direction: column;
+   
+    
+  }
+  
+}
+@media screen and (max-width: 687px){
+  .StatusButton{
+    font-size: 2.3vw;
+   
+    
+  }
+  
+}
+@media screen and (max-width: 461px){
+  .StatusButton{
+    font-size: medium;
+   
+    
+  }
+  
+}

@@ -1,20 +1,22 @@
+$bg_button: #6256e536;
 .NavBar{
-    background: linear-gradient(180deg, #65DAE1 17.74%, #F5FCCA 100%);
+    background-image: linear-gradient( 108.9deg,  rgba(21,65,168,1) 4.9%, rgba(120,232,173,1) 97% );
     box-sizing: border-box;
     height: 6em;
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     .Logo{
-        color: green;
+        color: white;
+        font-family: 'Prompt', sans-serif;
         height: 60px;
-        font-size: 2rem;
+        font-size: 1.6978rem;
         line-height: 60px;
         padding: 0 20px;
-        background: grey;
+        //background: grey;
         text-align: center;
         box-sizing: border-box;
         float: left;
-        font-weight: 700;
+        font-weight: 200;
         text-decoration: none;
     }
     nav{
@@ -32,8 +34,9 @@
                 padding: .5em 1.2em;
                 text-decoration: none;
                 color: black;
+                border-radius: 5px;
                 &.Active ,&:hover{
-                    background-color: #6356e5;
+                    background-color: $bg_button;
                     color: white;
                     transition: 0.5s;
                 }
@@ -45,9 +48,9 @@
         cursor: pointer;
         div{
             width: 1.5em;
-            height: .2em;
+            height: .169em;
             background-color: white;
-            margin: .2em;
+            margin: .13em;
             transition: all 0.5s ease;
         }
     }
@@ -60,7 +63,7 @@
             width: 2.5em;
             height: 2.5em;
             margin: 10px;
-            background: #6356e5;
+            background: $bg_button;
             float: right;
             cursor: pointer;
             text-align: center;
@@ -74,13 +77,13 @@
             
         }
         .toggle .line1{
-            transform: rotate(-45deg) translate(-.4em,.45em);
+            transform: rotate(-45deg) translate(-.3em,.3em);
         }
         .toggle .line2{
             opacity: 0;
         }
         .toggle .line3{
-            transform: rotate(45deg) translate(-.4em,-.4em);
+            transform: rotate(45deg) translate(-.3em,-.3em);
         }
         nav{
             display: none;

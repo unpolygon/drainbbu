@@ -21,7 +21,12 @@ const NavBar = () => {
 
     return(
         <div className='NavBar'>
+<<<<<<< HEAD
             <a href = "#" className='Logo'>Logo</a>
+=======
+            <a href = "#" className='Logo'>DrainBBU</a>
+            <div className='Menu-toggle'></div>
+>>>>>>> 8d024dc9c3313aaa9b2d8d308a204c4a07fc3524
             <nav>
                 <ul  id='NavBar_button'>
                     <li><Link to="/" class='Active'>Home</Link></li>

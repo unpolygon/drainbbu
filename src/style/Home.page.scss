@@ -1,0 +1,24 @@
+.HomePage{
+
+    .Content{
+        display: flex;
+        flex-direction: row;
+        flex: auto;
+        > div{
+            flex: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 461px){
+    .HomePage{
+        .Content{
+            flex-direction: column;
+            > div{
+                flex: auto;
+            }
+        }
+            
+        
+    }
+}

@@ -1,0 +1,162 @@
+/* .ControlPanel {
+    margin: 0 auto;
+    padding: 100px 30px 0;
+  
+    @media (min-width: 800px) {
+      max-width: 60%;
+    }
+  } */
+.flexrow{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.cardstatus{
+  width: 60%;
+  height: 20%;
+  margin-left: 60px;
+}
+.Controltxt{
+    margin: 64px 25px;
+    height: 40vh;
+    position: relative;
+    font-family: 'Prompt', sans-serif;
+  }
+
+.input-range::-webkit-slider-thumb {
+    margin-bottom: 160px;
+    top: 15%;
+    /* width: 80vw;
+    height: 40vh; */
+  }
+  
+.Header{
+    display: flex;
+    width: 100%;
+    position: relative;
+  }
+.MotherOfSpace{
+        width: 100%;
+        position: relative;
+  }
+.Space{
+            background-image: linear-gradient( 109.6deg,  rgba(104,183,249,1) 31.3%, rgba(176,248,200,1) 100.2% );
+            width: 95%;
+            height: 3px;
+            position: absolute;
+            top: 50%;
+            left: 5%;
+        }
+.MotherOfCircle{
+        position: relative;
+        width: 15px;
+        padding-left: 5%;
+  }
+.Circle{
+            height: 12px;
+            width: 12px;
+            background-color:rgba(104,183,249,1) ;
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            left:50%;
+            top:50%;
+        }
+.boxshadow{
+  /* position: absolute; */
+  width: 94%;
+  height: 52vh;
+  margin-bottom: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* left: 24px;
+  top: 344px; */
+  background: #F7F7F7;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+/* body{
+    margin : 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+div{
+    position: relative;
+}
+
+#rangeValue {
+    position: absolute;
+    top: 0 ;
+    left: -60px;
+    padding: 2px;
+    width: 50px;
+    box-sizing: border-box;
+    background: #fff;
+    text-align: center;
+}
+
+#rangeVale::before {
+content: '';
+top: 50%;
+transform: translateY(-50%) rotate(45deg);
+left: -5px;
+width: 10px;
+height: 10px;
+background: #fff;
+}
+
+.range{
+    width: 400px;
+    height: 2px;
+    background: #111;
+    -webkit-appearance: none;
+    outline: none;
+    border-radius: 2px;
+}
+
+.range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #00bcd4;
+} */
