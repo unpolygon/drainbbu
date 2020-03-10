@@ -41,12 +41,12 @@ const ResultCard = (props) => {
     
     const formularTMax = (v2, sumTimeMax) => {
         props.v2(v2);
-        let tMax = 101.3988 + (0.1834 * sumTimeMax) + (251.4515*v2);
+        let tMax = (101.3988 + (0.1834 * sumTimeMax) + (251.4515*v2))/60;
         setTMax(tMax);
     }
     
     const formularTDrain = (v2, sumTimeMax) => {
-        let tDrain = -220.1987 + (6.8215 * sumTimeMax) + (3432.8134 * v2);
+        let tDrain = (-220.1987 + (6.8215 * sumTimeMax) + (3432.8134 * v2))/60;
         setTDrain(tDrain);
     }
     
@@ -95,6 +95,7 @@ const ResultCard = (props) => {
                     place={props.place}
                     chkshow={callBackchkshow}
                     />
+                     &nbsp;
                 </div>
         </div>
     );

@@ -62,7 +62,7 @@ const StatusButton = (props) => {
                             <div className='coverTimeValue'>
                                 {show && <span id = "tMax" className='timeValue'>0.5</span>}
                                 {chkshow && <span id = "tDrain" className='timeValue'>0.5</span>}
-                                <span className='unit'> s</span>
+                                <span className='unit'> min</span>
                             </div>
                         </div>
                         }
@@ -73,11 +73,13 @@ const StatusButton = (props) => {
                             <div className='coverTimeValue'>
                                 {show && <span id = "tMax" className='timeValue'>0.5</span>}
                                 {chkshow && <span id = "tDrain" className='timeValue'>0.5</span>}
-                                <span className='unit'> s</span>
+                                <span className='unit'> min</span>
                             </div>
                         </div>
                         }
-                </div>
+            
+            <div>&nbsp;</div>
+            </div>
         );
 }
 
