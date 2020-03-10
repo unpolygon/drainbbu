@@ -1,5 +1,5 @@
 .HomePage{
-
+    padding: 0 8vw;
     .Content{
         display: flex;
         flex-direction: row;
@@ -10,8 +10,9 @@
     }
 }
 
-@media screen and (max-width: 461px){
+@media screen and (max-width: 870px){
     .HomePage{
+        padding: 0;
         .Content{
             flex-direction: column;
             > div{

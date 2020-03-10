@@ -79,6 +79,7 @@ const ResultCard = (props) => {
                 </div>
             </div>
             <div className="boxshadow">
+                    &nbsp;
                     <SlideValue 
                         formularV2={formularV2}
                         minV1 = {callBackMinV1}
