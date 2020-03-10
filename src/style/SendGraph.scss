@@ -5,7 +5,7 @@ $color-bg: #EBECF0;
 $color-shadow: #BABECC;
 $color-white: #FFF;
 .SendGraph{
-    // display: grid;
+    display: grid;
     justify-items: center;
     .ButtonGraph{
         display: grid;
@@ -58,6 +58,11 @@ $color-white: #FFF;
         width: 100vw;
         .Graph{
             width: 90vw;
+        }
+        .ButtonGraph{
+            display: grid;
+            place-items: center;
+            grid-auto-flow: row;
         }
     }
     

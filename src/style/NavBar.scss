@@ -2,7 +2,7 @@ $bg_button: #6256e536;
 .NavBar{
     background-image: linear-gradient( 108.9deg,  rgba(21,65,168,1) 4.9%, rgba(120,232,173,1) 97% );
     box-sizing: border-box;
-    height: 4em;
+    height: 6em;
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     .Logo{
@@ -12,7 +12,7 @@ $bg_button: #6256e536;
         height: 60px;
         font-size: 1.6978rem;
         line-height: 60px;
-        margin-top: -0.1em;
+        margin-top: 0.2em;
         padding: 0 20px;
         //background: grey;
         text-align: center;
@@ -33,7 +33,7 @@ $bg_button: #6256e536;
             }
             li a{
                 display: block;
-                margin: 0.24em 0;
+                margin: 0.85em 0;
                 padding: .5em 1.2em;
                 text-decoration: none;
                 color: black;
