@@ -30,7 +30,8 @@ const Model = (props) => {
         console.log("Model_chkshow : ",chkshow);
         if(v1){
             labelNumber.find('span').text(v1);
-            let pos = ((v1-minV1)/(maxV1-minV1))*100;
+            // let pos = ((v1-minV1)/(maxV1-minV1))*100;
+            let pos = v1*100;
             let waterpos = pos;
             console.log('pos: ',pos);
             if(pos <= 0 || pos == Infinity) pos = 0;

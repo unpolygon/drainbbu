@@ -59,6 +59,11 @@ $color-white: #FFF;
         .Graph{
             width: 90vw;
         }
+        .ButtonGraph{
+            display: grid;
+            place-items: center;
+            grid-auto-flow: row;
+        }
     }
     
 }
