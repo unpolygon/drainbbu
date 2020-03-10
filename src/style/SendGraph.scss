@@ -7,8 +7,28 @@ $color-white: #FFF;
 .SendGraph{
     display: grid;
     justify-items: center;
+    .ButtonGraph{
+        display: grid;
+        place-items: center;
+        grid-auto-flow: column;
+        padding: 10px;
+        width: 100%;
+        margin: 1px 0 5px 0;
+        background-image: linear-gradient(108.9deg, #1541a8 4.9%, #78e8ad 97%);
+   
+        > div{
+            justify-self: center;
+            >span{
+                color: white;
+            }
+        }
+    }
     .Graph{
         width: 60vw;
+        margin: 10px 0;
+        -webkit-box-shadow: 18px 21px 28px -30px rgba(0,0,0,0.75);
+        -moz-box-shadow: 18px 21px 28px -30px rgba(0,0,0,0.75);
+        box-shadow: 18px 21px 28px -30px rgba(0,0,0,0.75);
     }
     .Date-Time{
         padding: 1em;
