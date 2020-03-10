@@ -1,6 +1,7 @@
 import React,{useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import '../style/NavBar.scss'
+import $ from 'jquery';
 
 const NavBar = () => {
     useEffect(() => {
@@ -9,29 +10,20 @@ const NavBar = () => {
 
     function navSlide(){
         const burger = document.querySelector('.Burger');
-        // const nav = document.querySelector('.nav-links');
-        // const navLinks = document.querySelectorAll('.nav-links li');
-
         burger.addEventListener('click',() => {
-            // nav.classList.toggle('nav-active');
-
-            // navLinks.forEach((link, index) => {
-            //     if(link.style.animation){
-            //         link.style.animation = ''
-            //     }
-            //     else link.style.animation = `navLinkFade 0.5s ease forwards ${index/7+1}s`;
-            // })
-
             burger.classList.toggle('toggle');
         })
+        $( '#NavBar_button li a' ).on( 'click', function() {
+            $( this ).parent().parent().find('li a.Active').removeClass( 'Active' );
+            $( this ).addClass( 'Active' );
+        });
     }
 
     return(
         <div className='NavBar'>
             <a href = "#" className='Logo'>Logo</a>
-            <div className='Menu-toggle'></div>
             <nav>
-                <ul>
+                <ul  id='NavBar_button'>
                     <li><Link to="/" class='Active'>Home</Link></li>
                     <li><Link to="/Overview" >Overview</Link></li>
                     <li><Link to="/Graph" >Graph</Link></li>

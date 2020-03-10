@@ -3,6 +3,7 @@ import HomePage from './page/Home.page';
 import NavBar from './component/NavBar';
 import GraphPage from './page/Graph.page';
 import OverviewPage from './page/Overview.page';
+import HeePage from './page/Hee.page';
 import { Link, BrowserRouter as Router, Route, Switch , HashRouter} from 'react-router-dom';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" exact component={HomePage} />
           <Route path="/Overview" component={OverviewPage} />
           <Route path="/Graph" component={GraphPage} />
+          <Route path="/Hee" component={HeePage} />
         </Switch>
       </div>
     </HashRouter>
