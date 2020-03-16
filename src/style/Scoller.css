@@ -3,16 +3,77 @@
     width: 100%;
     position: relative;
 }
-.Scoller{
-    display: grid;
+/* 
+datalist {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: -23px;
+    padding-top: 0px;
+}
+option {
+    width: 2ex;
+    display: flex;
+    justify-content: center;
+    height: 42px;
+    align-items: end;
+    height: 4ex;
+    background-position-y: -15px;
+    background-position-x: center;
+    z-index: 1;
+} */
+
+.markvalue{
+    padding-top:23px;
+    padding-left: 8px;
+}
+
+.Scoller {
+    display: flex;
     /* grid-template-rows: auto; */
     /* grid-template-columns: 1fr 3fr 1fr; */
+    
     text-align: right;
     /* align-items: right; */
 }
 
-.Scoller input{
+/* .Scoller input{
     flex: 6;
+    -webkit-appearance: none;
+    width: 80%;
+    height: 5px;
+    border-radius: 5px;
+    background: #707070;
+    outline: none;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+} */
+
+.Scoller option{
+    /* -webkit-appearance: none; */
+    width: 2ex;
+    display: flex;
+    justify-content: center;
+    height: 42px;
+    align-items: end;
+    height: 4ex;
+    background-position-y: -15px;
+    background-position-x: center;
+    z-index: 1;
+}
+
+.Scoller datalist{
+    /* -webkit-appearance: none; */
+    /* display: flex; */
+    /* width: 100px; */
+    /* justify-content: space-between; */
+    
+    margin-top: -23px;
+    padding-top: 0px;
+}
+.Scoller input{
+    /* flex: 6; */
+    
     -webkit-appearance: none;
     width: 80%;
     height: 5px;
@@ -32,7 +93,10 @@
     appearance: none;
     width: 25px;
     height: 25px;
-    background: rgb(0, 0, 0);
+    /* background: rgb(0, 0, 0); */
+    border: 1px solid #AAA;
+    background: #DDD;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     cursor: pointer;
     border-radius: 50% ;
     

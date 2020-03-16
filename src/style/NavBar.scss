@@ -6,11 +6,13 @@ $bg_button: #6256e536;
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     .Logo{
+        margin-left: 8%;
         color: white;
         font-family: 'Prompt', sans-serif;
         height: 60px;
         font-size: 1.6978rem;
         line-height: 60px;
+        margin-top: 0.2em;
         padding: 0 20px;
         //background: grey;
         text-align: center;
@@ -20,6 +22,7 @@ $bg_button: #6256e536;
         text-decoration: none;
     }
     nav{
+        margin-right: 8%;
         float: right;
         ul{
             margin: 0;
@@ -30,7 +33,7 @@ $bg_button: #6256e536;
             }
             li a{
                 display: block;
-                margin: 1em 0;
+                margin: 0.85em 0;
                 padding: .5em 1.2em;
                 text-decoration: none;
                 color: black;
@@ -56,13 +59,16 @@ $bg_button: #6256e536;
     }
 }
 
-@media (max-width: 486px){
+@media (max-width: 530px){
     .NavBar{
+        .Logo{
+            margin-left: 0;
+        }
         .Burger{
             display: block;
             width: 2.5em;
             height: 2.5em;
-            margin: 10px;
+            margin: 0;
             background: $bg_button;
             float: right;
             cursor: pointer;
