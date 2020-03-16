@@ -25,7 +25,7 @@ const NavBar = () => {
             <div className='Menu-toggle'></div>
             <nav>
                 <ul  id='NavBar_button'>
-                    <li><Link to="/" class='Active'>Home</Link></li>
+                    <li><Link to="/" className='Active'>Home</Link></li>
                     <li><Link to="/Overview" >Overview</Link></li>
                     <li><Link to="/Graph" >Graph</Link></li>
                 </ul>

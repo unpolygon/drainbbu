@@ -1,26 +1,35 @@
 import React,{useEffect, useState} from 'react';
 import axios from 'axios';
 
-var RfGraph = require('../algorithm/q.json');
+var RfGraph = require('../algorithm/rf.json');
 
-const OverviewPage = () => {
+const AddGraphPage = () => {
     useEffect(() => {
         
     });
     
-     async function addWlGraph(e){
+     async function addGraph(e){
         e.preventDefault();
-        for(const each in RfGraph){
-            console.log(each,RfGraph[each]);
-            let sitKey = RfGraph[each];
-            let WlGraph_JSON = {
-                // count: count,
-                date: sitKey.date,
-                time: sitKey.time,
-                value: sitKey.value
+        for(const sit in RfGraph){
+            // console.log('sit: ',sit,RfGraph[sit]);
+            for(const each in RfGraph[sit]){
+                // console.log('sitEach: ',RfGraph[sit][each]);
+                let sitEach = RfGraph[sit][each];
+                let Graph_JSON = {
+                        'count':sit,
+                        'date':sitEach.date,
+                       'month':sitEach.month,
+                       'year':sitEach.year,
+                       'time':sitEach.time,
+                        'rfValue':sitEach.rfValue,
+                        'qValue':sitEach.qValue,
+                        'wlValue':sitEach.wlValue
             }
-            await axios.post('http://localhost:5000/QGraph/add', WlGraph_JSON)
+            // console.log(Graph_JSON);
+            await axios.post('http://localhost:5000/AddGraph/add', Graph_JSON)
             .then(res => console.log(res.data)).catch(err => console.log('Error: '+err));
+            }
+            
         }
     }
 
@@ -52,7 +61,7 @@ const OverviewPage = () => {
             <input placeholder='Time' id='Time'></input>
             <input placeholder='Value' id='Value'></input>
             <button onClick={onSubmit}>Add WlGraph</button>
-            <button onClick={addWlGraph}>Add Auto WlGraph</button>
+            <button onClick={addGraph}>Add Auto WlGraph</button>
         </div>
     );
 }

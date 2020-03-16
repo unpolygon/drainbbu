@@ -1,13 +1,13 @@
 import React,{useEffect, useState} from 'react';
 import axios from 'axios';
-import HeePage from './Hee.page';
+import AddGraphPage from './AddGraph.page';
 
 
 const OverviewPage = () => {
     return(
         <div className ='OverviewPage'>
             Hello OverviewPage
-            {/* <HeePage /> */}
+            <AddGraphPage />
         </div>
     );
 }

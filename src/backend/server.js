@@ -30,13 +30,13 @@ connection.once('open', () => {
 
 const exercisesRouter = require('./routes/exercises');
 const usersRouter = require('./routes/users');
-const RfGraphRouter = require('./routes/RfGraph');
+const GraphRouter = require('./routes/Graph');
 const QGraphRouter = require('./routes/QGraph');
 const WlGraphRouter = require('./routes/WlGraph');
+app.use('/AddGraph', GraphRouter);
 
 app.use('/exercises', exercisesRouter);
 app.use('/users', usersRouter);
-app.use('/RfGraph', RfGraphRouter);
 app.use('/QGraph', QGraphRouter);
 app.use('/WlGraph', WlGraphRouter);
 

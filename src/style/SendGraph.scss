@@ -1,12 +1,20 @@
 @import "~react-datepicker/dist/react-datepicker.css";
 $ruler: 16px;
 $color-red: #AE1100;
-$color-bg: #EBECF0;
 $color-shadow: #BABECC;
 $color-white: #FFF;
+$color-grey:rgba(255, 255, 255, 0.801);
+$color-bg-gradient: linear-gradient(108.9deg, #1541a8 4.9%, #78e8ad 97%);
 .SendGraph{
-    display: grid;
-    justify-items: center;
+    // display: grid;
+    // justify-items: center;
+    // grid-gap: 5px;
+    // grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    // grid-template-columns: repeat(auto-fit, minmax(1fr,1fr));
+    // grid-template-rows: repeat(2, 100px);
+    background: linear-gradient(#f8f8f8, #fff);
+    // background-color: $color-grey;
+
     .ButtonGraph{
         display: grid;
         place-items: center;
@@ -14,41 +22,37 @@ $color-white: #FFF;
         padding: 10px;
         width: 100%;
         margin: 1px 0 5px 0;
-        background-image: linear-gradient(108.9deg, #1541a8 4.9%, #78e8ad 97%);
-   
+        background-color: white;
+        position: sticky;
+        top: 0;
+        box-shadow: 0 8px 16px -8px rgba(177, 177, 177, 0.4);
+        // background-image: $color-white;
         > div{
             justify-self: center;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+            border-right: 1px rgb(219, 219, 219) solid;
             >span{
                 color: white;
             }
+            &:nth-last-child(1){
+                border-right: none;
+            }
+            .ButtonGraph{
+                width: 90%;
+            }
         }
+        
     }
     .Graph{
         width: 60vw;
-        margin: 10px 0;
-        -webkit-box-shadow: 18px 21px 28px -30px rgba(0,0,0,0.75);
-        -moz-box-shadow: 18px 21px 28px -30px rgba(0,0,0,0.75);
-        box-shadow: 18px 21px 28px -30px rgba(0,0,0,0.75);
-    }
-    .Date-Time{
-        padding: 1em;
-        display: flex;
-        p{
-            border-radius: 10px;
-            box-shadow: -5px -5px 20px $color-white,  5px 5px 20px $color-shadow;
-            padding: 1em;
-            margin: 0 1em; 
-            &:hover {
-                box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
-            } 
-            &:active {
-                box-shadow: inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
-            }  
-        }
-        // width: 100%;
-        span{
-            padding: 1em;
-        }
+        background-color: white;
+        box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+        border-radius: 6px;
+        white-space: normal;
+        margin: 2em auto;
     }
 }
 
@@ -58,11 +62,6 @@ $color-white: #FFF;
         width: 100vw;
         .Graph{
             width: 90vw;
-        }
-        .ButtonGraph{
-            display: grid;
-            place-items: center;
-            grid-auto-flow: row;
         }
     }
     
