@@ -14,6 +14,7 @@ const ResultCard = (props) => {
     const [tMax,setTMax] = useState(0);
     const [tDrain,setTDrain] = useState(0);
     const [chkshow,setChkshow] = useState(false);
+    const [show,setshow] = useState(true);
     // const [chkFalse,setChkFalse] = useState(false);
     // console.log({v1});
 
@@ -43,11 +44,13 @@ const ResultCard = (props) => {
         props.v2(v2);
         let tMax = (101.3988 + (0.1834 * sumTimeMax) + (251.4515*v2))/60;
         setTMax(tMax);
+        props.tMax(tMax)
     }
     
     const formularTDrain = (v2, sumTimeMax) => {
         let tDrain = (-220.1987 + (6.8215 * sumTimeMax) + (3432.8134 * v2))/60;
         setTDrain(tDrain);
+        props.tDrain(tDrain)
     }
     
     const callBackMaxV1 = (maxV1) => {
@@ -65,6 +68,11 @@ const ResultCard = (props) => {
         props.chkshow(chkshow)
         console.log("Res_chkshow : ",chkshow);
     }
+    const callBackshow = (show) => {
+        setshow(show);
+        props.show(show)
+        console.log("Res_show : ",show);
+      }
 
 
     return(
@@ -84,7 +92,8 @@ const ResultCard = (props) => {
                         formularV2={formularV2}
                         minV1 = {callBackMinV1}
                         maxV1 = {callBackMaxV1}
-                        chkshow={chkshow}
+                        chkshow = {chkshow}
+                        show = {show}
                         />
                     <StatusButton 
                     v1={v1}
@@ -95,6 +104,7 @@ const ResultCard = (props) => {
                     tDrain={tDrain}
                     place={props.place}
                     chkshow={callBackchkshow}
+                    show={callBackshow}
                     />
                      &nbsp;
                 </div>

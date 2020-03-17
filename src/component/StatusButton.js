@@ -11,7 +11,7 @@ const StatusButton = (props) => {
     let tMax = parseInt(props.tMax);
     let tDrain = parseInt(props.tDrain);
     let place = props.place;
-    const [show , setShow] = useState(false);
+    const [show , setshow] = useState(false);
     const [chkshow , setChkshow ] = useState(true);
     let hold = false ; 
     let col = '' ;
@@ -22,25 +22,33 @@ const StatusButton = (props) => {
         console.log("StatusBT_chkshow : ",chkshow);
     }
 
+    const callBackshow = (show) => {
+        setshow(show);
+        props.show(show);
+        console.log("StatusBT_show : ",show);
+    }
+
     const ToggleDiv = () => {
         callBackchkshow(chkshow)
+        callBackshow(show)
         $(document).ready(() => {
-            setShow(!show)
+            setshow(!show)
             setChkshow(!chkshow)
-            
-            // console.log(props.tDrain);
-            if(!show){
-                let timeValuetMax = document.getElementById('tMax');
-                timeValuetMax.innerHTML = props.tMax.toFixed(2);
                 console.log('chkshow',chkshow);
                 console.log('show',show);
-            }
-            else if(show){
-                let timeValuetDrain = document.getElementById('tDrain');
-                timeValuetDrain.innerHTML = props.tDrain.toFixed(2);
-                console.log('chkshow',chkshow);
-                console.log('show',show);   
-            }
+            // console.log(props.tDrain);
+            // if(!show){
+            //     let timeValuetMax = document.getElementById('tMax');
+            //     timeValuetMax.innerHTML = props.tMax.toFixed(2);
+            
+            
+            // }
+            // else if(show){
+            //     let timeValuetDrain = document.getElementById('tDrain');
+            //     timeValuetDrain.innerHTML = props.tDrain.toFixed(2);
+            //     console.log('chkshow',chkshow);
+            //     console.log('show',show);   
+            // }
         })  
     }
     // const callBackchkshow = (chkshow) => {
@@ -52,9 +60,9 @@ const StatusButton = (props) => {
     
         return (
             <div className="StatusButton">
-                {chkshow && <Button style={{background: "#668DBB", boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }} onClick={ToggleDiv}>water up</Button>}
-                        {show && <Button color = "danger" style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"}} onClick={ToggleDiv}>water down</Button>}
-                        &nbsp;
+                {chkshow && <Button style={{background: "#668DBB", boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }} onClick={ToggleDiv}>โหมดจำลองน้ำขึ้น</Button>}
+                        {show && <Button color = "danger" style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"}} onClick={ToggleDiv}>โหมดจำลองน้ำลง</Button>}
+                        {/* &nbsp;
                         {show && 
                         <div className = "setCard">
                             <div>เวลาที่ฝนตกจนน้ำเต็มตลิ่ง : </div>
@@ -65,8 +73,9 @@ const StatusButton = (props) => {
                                 <span className='unit'> min</span>
                             </div>
                         </div>
-                        }
-                        {chkshow && 
+                        } */}
+
+                        {/* {chkshow && 
                         <div className = "setCard">
                             <div>เวลาที่ระบายน้ำจนเสร็จ :</div>
                             &nbsp;
@@ -76,7 +85,7 @@ const StatusButton = (props) => {
                                 <span className='unit'> min</span>
                             </div>
                         </div>
-                        }
+                        } */}
             
             <div>&nbsp;</div>
             </div>

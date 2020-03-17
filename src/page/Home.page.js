@@ -14,7 +14,9 @@ const HomePage = (props) => {
     const [maxV1,setMaxV1] = useState(0);
     const [v2,setV2] = useState(0)
     const [chkshow,setChkshow] = useState(props.chkshow);
-
+    const [show,setshow] = useState(props.show);
+    const [tMax,settMax] = useState(props.tMax);
+    const [tDrain,settDrain] = useState(props.tDrain);
 
     const callBackV1 = (v1) => {
         setV1(v1);
@@ -31,8 +33,21 @@ const HomePage = (props) => {
       }
       const callBackchkshow = (chkshow) => {
         setChkshow(chkshow);
-        console.log({chkshow});
-    }
+        console.log("home_chkshow : ",chkshow);
+      }
+      const callBackshow = (show) => {
+        setshow(show);
+        console.log("home_show : ",show);
+      }
+      const callBacktMax = (tMax) => {
+        settMax(tMax);
+        console.log("home_tMax : ",tMax);
+      }
+      const callBacktDrain = (tDrain) => {
+        settDrain(tDrain);
+        console.log("home_tDrain : ",tDrain);
+      }
+      
     
 
     return(
@@ -45,9 +60,14 @@ const HomePage = (props) => {
                 minV1={minV1}
                 v2={v2} 
                 chkshow={chkshow}
+                tMax={tMax}
+                tDrain={tDrain}
+                show={show}
                 />
                 <ResultCard
-                 v1={callBackV1} maxV1={callBackMaxV1} minV1={callBackMinV1} v2={callBackV2} chkshow={callBackchkshow}
+                 v1={callBackV1} maxV1={callBackMaxV1} minV1={callBackMinV1} v2={callBackV2} chkshow={callBackchkshow} show={callBackshow}
+                 tMax={callBacktMax}
+                 tDrain={callBacktDrain}
                 />
 
             </div>

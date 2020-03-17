@@ -31,9 +31,9 @@ const SlideValue = (props) => {
   return(
     
     <div className='SlideValue'>
-      <span>ระดับน้ำเริ่มต้น</span>
+      <span>ระดับน้ำเริ่มต้น (เมตร)</span>
       <Scoller v1={callBackV1} maxV1={callBackMaxV1} minV1={callBackMinV1}/>
-      <span>ระยะเวลาที่ฝนตก</span>
+      <span>ระยะเวลาที่ฝนตก (นาที)</span>
       <Scoller sumTimeMax={callBackSumTimeMax}/>
     </div>
   );

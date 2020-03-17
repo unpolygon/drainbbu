@@ -7,16 +7,16 @@ import { Link, BrowserRouter as Router, Route, Switch , HashRouter} from 'react-
 
 function App() {
   return (
-    <HashRouter basename= '\'>
+    <Router>
       <div className="App">
         <NavBar />
         <Switch>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/Overview" component={OverviewPage} />
+          <Route path="/" exact component={OverviewPage} />
+          <Route path="/model" component={HomePage} />
           <Route path="/Graph" component={GraphPage} />
 ]        </Switch>
       </div>
-    </HashRouter>
+    </Router>
   );
 }
 
