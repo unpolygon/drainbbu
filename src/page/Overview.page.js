@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import '../style/Overviewpage.scss'
 import { flexbox } from '@material-ui/system';
+import $ from 'jquery';
 
 
 
