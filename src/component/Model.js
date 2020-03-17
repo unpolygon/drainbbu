@@ -136,14 +136,14 @@ const Model = (props) => {
             </div>
                 {chkshow && 
                             <div className = "setCard">
-                                <span>เวลาที่ฝนตกจนน้ำเต็มตลิ่ง : </span>
-                                &nbsp;
-                                <div className='coverTimeValue'>
-                                    {chkshow && <span id = "tMax" className='timeValue'>0.5</span>}
-                                    {show && <span id = "tDrain" className='timeValue'>0.5</span>}
-                                    {chkMin &&<span className='unit'> min</span>}
-                                    {chkHr &&<span className='unit'> Hr</span>}
-                                </div>
+                                    <span>เวลาที่ฝนตกจนน้ำเต็มตลิ่ง : </span>
+                                    &nbsp;
+                                    <div className='coverTimeValue'>
+                                        {chkshow && <span id = "tMax" className='timeValue'>0.5</span>}
+                                        {show && <span id = "tDrain" className='timeValue'>0.5</span>}
+                                        {chkMin &&<span className='unit'> min</span>}
+                                        {chkHr &&<span className='unit'> Hr</span>}
+                                    </div>
                             </div>
                             }
 
