@@ -1,0 +1,64 @@
+
+.OverviewPage{
+    padding: 0 15vw;
+    font-family: 'Prompt', sans-serif;
+  
+}
+
+
+.section{
+    margin-top: 50px;
+}
+.accordion {
+    background-image: linear-gradient(90deg, rgba(20,96,186,1) 23%, rgba(96,195,166,1) 56%, rgba(227,244,148,1) 86%, rgba(255,211,106,1) 100%);;
+    color: #444;
+    height: 80px;
+    margin-top: 30px;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    border-radius: 15px;
+    font-size: x-large;
+    color: white;
+    
+  }
+ 
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
+    background-color: rgb(231, 231, 231);
+    border-radius: 15px;
+    margin-top: 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    font-size: x-large;
+  }
+  .accordion:after {
+    content: '\025BC'; /* Unicode character for "plus" sign (+) */
+    font-size: 25px;
+    color: whitesmoke;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\25B2"; /* Unicode character for "minus" sign (-) */
+  }
+
+  @media screen and (max-width: 910px){
+    .OverviewPage{
+      padding: 0 5vw;
+    
+  }
+}
