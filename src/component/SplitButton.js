@@ -15,7 +15,9 @@ import MenuList from '@material-ui/core/MenuList';
 export default function SplitButton(props) {
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
+  // const [selectedIndex, setSelectedIndex] = React.useState(8);
+  const [selectedIndex, setSelectedIndex] = useState(props.index);
+  console.log('index: ',props.index);
 
   const handleClick = () => {
     console.info(`You clicked ${props.options[selectedIndex]}`);
@@ -23,6 +25,8 @@ export default function SplitButton(props) {
 
   const handleMenuItemClick = (event, index) => {
     setSelectedIndex(index);
+    if (props.monthCallback) props.monthCallback(index+8);
+    if (props.sitCallback) props.sitCallback(index);
     setOpen(false);
   };
 
@@ -69,7 +73,6 @@ export default function SplitButton(props) {
                     {props.options.map((option, index) => (
                       <MenuItem
                         key={option}
-                        disabled={index === 2}
                         selected={index === selectedIndex}
                         onClick={event => handleMenuItemClick(event, index)}
                       >
