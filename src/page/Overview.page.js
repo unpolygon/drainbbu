@@ -8,7 +8,8 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import '../style/Overviewpage.scss'
 import { flexbox } from '@material-ui/system';
-
+import BBU from '../asset/bbu.PNG'
+import Panel from '../component/panel.js'
 
 
 const OverviewPage = () => {
@@ -40,27 +41,33 @@ const OverviewPage = () => {
     <div className='section'>
     <button class="accordion" >วัตถุประสงค์</button>
     <div class="panel">
-    <p>ศึกษาความสัมพันธ์ระหว่างค่าคาดการณ์ฝนตก ระดับน้ำใน
-    คลองบางบัว และเวลาที่ใช้ในการระบายน้ำ</p>
+    <p>ศึกษาความสัมพันธ์ระหว่างค่าคาดการณ์ฝนตกระดับน้ำในคลองบางบัวและเวลาที่ใช้ในการระบายน้ำ</p>
     </div>
 
     <button class="accordion" style={{background: "linear-gradient(90deg, rgba(48,152,167,1) 10%, rgba(119,218,179,1) 33%, rgba(253,128,45,1) 100%)"}}>ปัญหา</button>
     <div class="panel">
-    <p>ความสามารถในการรับและการ
-ระบายน้ำเมื่อฝนตก :
-กรณีศึกษาที่สถานีวัดอัตราการ
-ไหลและน้ำาฝนคลองบางบัว
-(RF.BKA.02, FW.BBU.01)
-เขตบางเขน กรุงเทพ ปี 2561</p>
-    </div>
+    <p>ความสามารถในการรับและการระบายน้ำเมื่อฝนตก :
+กรณีศึกษาที่สถานีวัดอัตราการไหลและน้ำฝนคลองบางบัว (RF.BKA.02, FW.BBU.01) เขตบางเขน กรุงเทพ ปี 2561
+
+</p>
+<img src={BBU} alt="Smiley face" height="70%" width="70%" class="center" />
+  &nbsp;
+  </div>
 
     <button class="accordion" style={{background: "linear-gradient(90deg, rgba(48,152,167,1) 0%, rgba(119,218,179,1) 25%, rgba(255,173,119,1) 57%, rgba(255,98,125,1) 91%)"}}>ทำงานอย่างไร?</button>
     <div class="panel">
-    <p>Lorem ipsum...</p>
+    <p>
+    &nbsp;
+    <Panel />
+    &nbsp;
+    </p>
     </div>
     </div>
+    &nbsp;
     </div>
+    
     );
+    
 }
 
 export default OverviewPage;
