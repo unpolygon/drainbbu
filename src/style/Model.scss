@@ -83,19 +83,21 @@
         .setCard{
             display : flex ;
             flex-direction: row ;
-            width: 45%;
+            width: 55%;
             border: 1px solid #828282;
             box-sizing: border-box;
             border-radius: 10px;
             padding: .2em;
-            margin-top: 58%;
+            margin-top: 60%;
         }
         .label-number{
-            margin-left: 50%;
+            margin-left: 58%;
             margin-top: -28px;
             background:#63FC01;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 2.5px 2.5px rgba(0, 0, 0, 0.25);
             text-align: center;
+            box-sizing: border-box;
+            border-radius: 10px;
         }
         .ShowValue-middle{
             background-color: #f9ca24;
@@ -175,6 +177,73 @@
 }
 
 
+@media screen and ( max-width:1490px ) and ( max-height: 680px){
+    .Model{
+            height: 55vh;
+        .DrainModel{
+            width: 390px;
+            height: 234px; 
+            top: 60%;
+        }  
+        .setCard{
+            display : flex ;
+            flex-direction: row ;
+            width: 45vh;
+            border: 1px solid #828282;
+            box-sizing: border-box;
+            border-radius: 10px;
+            padding: .2em;
+            margin-top: 50vh;
+          }
+          .label-number{
+            margin-left: 76%;
+            // margin-top: 20%;
+            background:#63FC01;
+            text-align: center;
+        }
+        .ShowValue-middle{
+            background-color: #f9ca24;
+            color: black;
+        }
+        
+        .ShowValue-high{
+            background-color: #eb4d4b;
+        }
+    }
+}
+
+@media screen and ( max-width:990px ) and ( max-height: 680px){
+    .Model{
+        
+        .DrainModel{
+            width: 390px;
+            height: 234px; 
+        }  
+        .setCard{
+            display : flex ;
+            flex-direction: row ;
+            width: 45vh;
+            border: 1px solid #828282;
+            box-sizing: border-box;
+            border-radius: 10px;
+            padding: .2em;
+            margin-top: 44vh;
+          }
+          .label-number{
+            margin-left: 76%;
+            background:#63FC01;
+            text-align: center;
+        }
+        .ShowValue-middle{
+            background-color: #f9ca24;
+            color: black;
+        }
+        
+        .ShowValue-high{
+            background-color: #eb4d4b;
+        }
+    }
+}
 
 @media screen and (max-width: 1490px){
     .Model{
@@ -186,48 +255,68 @@
         .setCard{
             display : flex ;
             flex-direction: row ;
-            width: 42vh;
+            // width: 45vh;
+            width: 100%;
             border: 1px solid #828282;
             box-sizing: border-box;
             border-radius: 10px;
             padding: .2em;
-            margin-top: 39vh;
+            margin-top: 45vh;
+            justify-content: center;
           }
           .label-number{
-            margin-left: 76%;
+            width: 50%;
+            margin-left: 25%;
+            margin-top: 10px;
             background:#63FC01;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             text-align: center;
         }
-    }
-}
-@media screen and (max-width: 990px){
-    .Model{
+        .ShowValue-middle{
+            background-color: #f9ca24;
+            color: black;
+        }
         
-        .DrainModel{
-            width: 390px;
-            height: 234px; 
-        }  
-        .setCard{
-            display : flex ;
-            flex-direction: row ;
-            width: 42vh;
-            border: 1px solid #828282;
-            box-sizing: border-box;
-            border-radius: 10px;
-            padding: .2em;
-            margin:0px auto;
-          }
-          .label-number{
-            margin-left: 50%;
-            margin-top: 35vh;
-            background:#63FC01;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            text-align: center;
+        .ShowValue-high{
+            background-color: #eb4d4b;
         }
     }
 }
-@media screen and (max-width:680px){
+// @media screen and (max-width: 990px) and ( max-height: 680px){
+//     .Model{
+        
+//         .DrainModel{
+//             width: 390px;
+//             height: 234px; 
+//         }  
+//         .setCard{
+//             display : flex ;
+//             flex-direction: row ;
+//             width: 50vh;
+//             border: 1px solid #828282;
+//             box-sizing: border-box;
+//             border-radius: 10px;
+//             padding: .2em;
+//             margin:0px auto;
+//           }
+//           .label-number{
+//             width: 50%;
+//             margin-left: 25%;
+//             margin-top: 45vh;
+//             background:#63FC01;
+//             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+//             text-align: center;
+//         }
+//         .ShowValue-middle{
+//             background-color: #f9ca24;
+//             color: black;
+//         }
+        
+//         .ShowValue-high{
+//             background-color: #eb4d4b;
+//         }
+//     }
+// }
+@media screen and (max-width:870px){
     .Model{
         .DrainModel{
             width: 300px;
@@ -236,19 +325,27 @@
         .setCard{
             display : flex ;
             flex-direction: row ;
-            width: 40vh;
+            width: 47vh;
             border: 1px solid #828282;
             box-sizing: border-box;
             border-radius: 10px;
             padding: .2em;
-            margin:5px auto;
+            margin:25px auto;
           }
           .label-number{
-            margin-left: 50%;
-            margin-top: 35vh;
+            width: 50%;
+            margin-left: 25%;
+            margin-top: 32vh;
             background:#63FC01;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             text-align: center;
+        }
+        .ShowValue-middle{
+            background-color: #f9ca24;
+            color: black;
+        }
+        
+        .ShowValue-high{
+            background-color: #eb4d4b;
         }
     }
 }
@@ -259,14 +356,22 @@
             height: 150px; 
         }
         .setCard{
-            width: 40vh;
+            width: 47vh;
           }
         .label-number{
-            margin-left: 50%;
-            margin-top: 29vh;
+            width: 50%;
+            margin-left: 25%;
+            margin-top: 28vh;
             background:#63FC01;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             text-align: center;
+        }
+        .ShowValue-middle{
+            background-color: #f9ca24;
+            color: black;
+        }
+        
+        .ShowValue-high{
+            background-color: #eb4d4b;
         }
     }
 }
@@ -280,11 +385,18 @@
             width: 100%;
           }
         .label-number{
-            margin-left: 50%;
-            margin-top: 27.5vh;
+            margin: auto;
+            margin-top: 29vh;
             background:#63FC01;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             text-align: center;
+        }
+        .ShowValue-middle{
+            background-color: #f9ca24;
+            color: black;
+        }
+        
+        .ShowValue-high{
+            background-color: #eb4d4b;
         }
     }
 }

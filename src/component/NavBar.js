@@ -14,16 +14,8 @@ const NavBar = () => {
         const burger = document.querySelector('.Burger');
         burger.addEventListener('click',() => {
             burger.classList.toggle('toggle');
-            setButtonNav(true);
+            $('nav').toggleClass('nav-active');
         })
-        $( '#NavBar_button li a' ).on( 'click', function() {
-            $( this ).parent().parent().find('li a.Active').removeClass( 'Active' );
-            $( this ).addClass( 'Active' );
-        });
-    }
-    function beHidden(){
-        setButtonNav(false);
-
     }
 
     return(
@@ -32,23 +24,16 @@ const NavBar = () => {
             {/* <div className='Menu-toggle'></div> */}
             <nav>
                 <ul  id='NavBar_button'>
-                    <li><NavLink exact to="/" activeClassName="is-active">Overview</NavLink></li>
-                    <li><NavLink exact to="/model" activeClassName="is-active">Model</NavLink></li>
-                    <li><NavLink exact to="/graph" activeClassName="is-active">Graph</NavLink></li>
+                    <li><NavLink exact to="/" activeClassName="Active">Overview</NavLink></li>
+                    <li><NavLink exact to="/model" activeClassName="Active">Model</NavLink></li>
+                    <li><NavLink exact to="/graph" activeClassName="Active">Graph</NavLink></li>
                 </ul>
             </nav>
             <div className='Burger' >
-                    <div className='line1'></div>
-                    <div className='line2'></div>
-                    <div className='line3'></div>
-                </div>
-            {showButtonNav && <div className="ButtonNavM" onClick={beHidden}>
-                <ul  id='NavBar_button'>
-                        <li><NavLink exact to="/" activeClassName="is-active">Overview</NavLink></li>
-                        <li><NavLink exact to="/model" activeClassName="is-active">Model</NavLink></li>
-                        <li><NavLink exact to="/graph" activeClassName="is-active">Graph</NavLink></li>
-                    </ul>
-                </div>}
+                <div className='line1'></div>
+                <div className='line2'></div>
+                <div className='line3'></div>
+            </div>
         </div>
     );
 }

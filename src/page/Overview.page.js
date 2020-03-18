@@ -10,6 +10,8 @@ import '../style/Overviewpage.scss'
 import { flexbox } from '@material-ui/system';
 import BBU from '../asset/bbu.PNG'
 import Panel from '../component/panel.js'
+import $ from 'jquery';
+
 
 
 const OverviewPage = () => {
@@ -48,13 +50,12 @@ const OverviewPage = () => {
     <div class="panel">
     <p>ความสามารถในการรับและการระบายน้ำเมื่อฝนตก :
 กรณีศึกษาที่สถานีวัดอัตราการไหลและน้ำฝนคลองบางบัว (RF.BKA.02, FW.BBU.01) เขตบางเขน กรุงเทพ ปี 2561
-
 </p>
 <img src={BBU} alt="Smiley face" height="70%" width="70%" class="center" />
-  &nbsp;
+&nbsp;
   </div>
 
-    <button class="accordion" style={{background: "linear-gradient(90deg, rgba(48,152,167,1) 0%, rgba(119,218,179,1) 25%, rgba(255,173,119,1) 57%, rgba(255,98,125,1) 91%)"}}>ทำงานอย่างไร?</button>
+    <button class="accordion" style={{background: "linear-gradient(90deg, rgba(48,152,167,1) 0%, rgba(119,218,179,1) 25%, rgba(255,173,119,1) 57%, rgba(255,98,125,1) 91%)"}}>แผนผังการดำเนินงาน</button>
     <div class="panel">
     <p>
     &nbsp;

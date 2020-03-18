@@ -42,7 +42,7 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    font-size: x-large;
+    font-size: larger;
   }
   .accordion:after {
     content: '\025BC'; /* Unicode character for "plus" sign (+) */
