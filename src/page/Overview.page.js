@@ -9,6 +9,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import '../style/Overviewpage.scss'
 import { flexbox } from '@material-ui/system';
 import BBU from '../asset/bbu.PNG'
+import Flood from '../asset/flood.jpg'
 import Panel from '../component/panel.js'
 import $ from 'jquery';
 
@@ -52,6 +53,8 @@ const OverviewPage = () => {
 กรณีศึกษาที่สถานีวัดอัตราการไหลและน้ำฝนคลองบางบัว (RF.BKA.02, FW.BBU.01) เขตบางเขน กรุงเทพ ปี 2561
 </p>
 <img src={BBU} alt="Smiley face" height="70%" width="70%" class="center" />
+&nbsp;
+<img src={Flood} alt="Smiley face" height="70%" width="70%" class="center" />
 &nbsp;
   </div>
 
