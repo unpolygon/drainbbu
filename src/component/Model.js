@@ -22,11 +22,11 @@ const Model = (props) => {
     useEffect(() => {
         let water = $('div[class^=Water]');
         let labelNumber = $('div[class*=label-number]');
-        $('.Water').attr('data-content','-0.4');
+        $('.Water').attr('data-content','-0.4 m');
         if(typeof(v1) != 'undefined'){
             labelNumber.find('span').text(v1);
             pos = ((v1-minV1)/(maxV1-minV1))*100;
-            $('.Water').attr('data-content',v1);
+            $('.Water').attr('data-content',v1+' m');
             console.log("Model_v1 : ",v1);
             let waterpos = pos;
             console.log('pos: ',pos);
@@ -40,7 +40,7 @@ const Model = (props) => {
             let x = (chkshow ? v2: v1);
             pos = ((x-minV1)/(maxV1-minV1))*100;
             flipShowWl();
-            $('.Water').attr('data-content',x);
+            $('.Water').attr('data-content',x+' m');
             if(pos > 100) pos = 100;
             water.css({'transition-duration': '5s','top':`${100-pos}%`});
             console.log('chk: ',chkshow,'pos: ',pos);
