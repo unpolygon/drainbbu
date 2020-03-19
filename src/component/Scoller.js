@@ -24,7 +24,7 @@ const Scoller = (props) => {
                 min ={props.v1 ? '-0.4' : '0'} 
                 max ={props.v1 ? '0.8' : '500'} 
                 step= {props.v1 ? '0.1' : '25'} 
-                defaultValue={props.v1 ? '-0.4' : '0'}
+                defaultValue={props.v1 ? '0' : '0'}
                 list="ticks"
                 />
             <datalist id="ticks">
@@ -32,7 +32,7 @@ const Scoller = (props) => {
                 <option>0.6</option>
                 <option>0.9</option>
             </datalist>
-            <span id='value' className="markvalue">{props.v1 ? '-0.4' : '0'}</span>
+            <span id='value' className="markvalue">{props.v1 ? '0' : '0'}</span>
         </div>
 
         

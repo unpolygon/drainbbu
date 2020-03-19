@@ -2,9 +2,9 @@ import React, { useState,useEffect} from 'react';
 import '../style/SendGraph.scss';
 import Graph from './Graph';
 import SplitButton from './SplitButton';
-import Button from '@material-ui/core/Button';
-import ButtonGroup from '@material-ui/core/ButtonGroup';
 import axios from 'axios';
+import { loadProgressBar } from 'axios-progress-bar'
+import 'axios-progress-bar/dist/nprogress.css'
 import $ from 'jquery';
 
 var month = ['Aug','Oct','Nov','Dec'];
@@ -35,6 +35,7 @@ const SendGraph = () => {
   useEffect(() => {
     getChartData();
     onSelectedMonth();
+    loadProgressBar();
   },[monthValue]);
   
   useEffect(() => {
