@@ -18,6 +18,8 @@ const Model = (props) => {
     const [chkHr , setChkHr ] = useState(false);
     const [chkMin , setChkMin ] = useState(true);
     let col = '' ;
+    console.log('v2-wtf-1 ',v2);
+    console.log('v1-wtf-1 ',v1);
 
     // const callBackchkshow = (chkshow) => {
     //     setChkshow(chkshow);
@@ -38,7 +40,7 @@ const Model = (props) => {
             let waterpos = pos;
             console.log('pos: ',pos);
             if(pos <= 20 || pos == Infinity) pos = 20;
-            else if(pos > 1.85) pos = 1.85;
+            else if(pos > 100) pos = 100;
             else if(pos > 87) pos = 87;
             $(document).ready(() => {
                 console.log('Intouch')
@@ -53,7 +55,7 @@ const Model = (props) => {
             let pos = ((v2-minV1)/(maxV1-minV1))*100;
             if(pos > 100) pos = 100;
             console.log('Model_tMax : ',tMax);
-            $(document).ready(() => {
+            // $(document).ready(() => {
                 if(tMax > 59){
                     water.css({'transition-duration': '5s','top':`${100-pos}%`});
                     let timeValuetMax = (document.getElementById('tMax'))/60;
@@ -71,13 +73,13 @@ const Model = (props) => {
                     setChkHr(false)
                     timeValuetMax.innerHTML = props.tMax.toFixed(2);
                 }
-            });
+            // });
         }else if(chkshow==false){
             let pos = ((v1-minV1)/(maxV1-minV1))*100;
             if(pos > 100) pos = 100;
             console.log('down');
             console.log('Model_tDrain : ',tDrain);
-            $(document).ready(() => {
+            // $(document).ready(() => {
                 if(tDrain > 59){
                     water.css({'transition-duration': '5s','top':`${100-pos}%`});
                     let timeValuetDrain = document.getElementById('tDrain');
@@ -95,10 +97,10 @@ const Model = (props) => {
                     console.log('down_min');
                     timeValuetDrain.innerHTML = props.tDrain.toFixed(2);
                 }
-            });
+            // });
         }
 
-        $(document).ready(() => {
+        // $(document).ready(() => {
             if(v2 > 1.3 && (chkshow || show) ){
                 labelNumber.addClass('ShowValue-high');
                 document.getElementById('statusColor').innerHTML = "น้ำท่วมถนน!!";
@@ -112,8 +114,8 @@ const Model = (props) => {
                 document.getElementById('statusColor').innerHTML = "ระดับน้ำปกติ";
             }
         })
-        console.log('v2-wtf ',v2);
-    });
+        console.log('v2-wtf-2 ',v2);
+    // });
 
 
 
