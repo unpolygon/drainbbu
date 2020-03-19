@@ -85,10 +85,10 @@ const Model = (props) => {
                 }
         }
 
-            if(v2 > 1.3 && (chkshow || show) ){
+            if(v2 > 1.85 && (chkshow || show) ){
                 labelNumber.addClass('ShowValue-high');
                 document.getElementById('statusColor').innerHTML = "น้ำท่วมถนน!!";
-            }else if(v2 > 0.7 && (chkshow || show) ){
+            }else if(v2 > 1.3 && (chkshow || show) ){
                 labelNumber.addClass('ShowValue-middle');
                 labelNumber.removeClass('ShowValue-high');
                 document.getElementById('statusColor').innerHTML = "น้ำใกล้ท่วมถนนแล้ว!";
