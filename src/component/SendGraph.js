@@ -8,6 +8,7 @@ import 'axios-progress-bar/dist/nprogress.css'
 import $ from 'jquery';
 
 var month = ['Aug','Oct','Nov','Dec'];
+var ENDPOINT = 'https://drain-bbu.herokuapp.com/';
 
 const SendGraph = () => {
   var tzoffset = (new Date()).getTimezoneOffset() * 60000;
@@ -51,7 +52,7 @@ const SendGraph = () => {
       }
     };
 
-    axios.get('http://localhost:5000/AddGraph/',config)
+    axios.get(`${ENDPOINT}AddGraph/`,config)
     .then(response => {
       console.log(response);
       if(response.data.length > 0){
