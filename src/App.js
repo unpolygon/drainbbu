@@ -7,7 +7,7 @@ import { Link, BrowserRouter as Router, Route, Switch , HashRouter} from 'react-
 
 function App() {
   return (
-    <Router>
+    <HashRouter basename='/'>
       <div className="App">
         <NavBar />
         <Switch>
@@ -16,7 +16,7 @@ function App() {
           <Route path="/Graph" component={GraphPage} />
 ]        </Switch>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
