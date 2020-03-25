@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/drainbbu/static/css/main.51c7fd08.chunk.css",
-    "main.js": "/drainbbu/static/js/main.4073af53.chunk.js",
-    "main.js.map": "/drainbbu/static/js/main.4073af53.chunk.js.map",
-    "runtime-main.js": "/drainbbu/static/js/runtime-main.2218cf2e.js",
-    "runtime-main.js.map": "/drainbbu/static/js/runtime-main.2218cf2e.js.map",
-    "static/css/2.b3a51b11.chunk.css": "/drainbbu/static/css/2.b3a51b11.chunk.css",
-    "static/js/2.3dd78b25.chunk.js": "/drainbbu/static/js/2.3dd78b25.chunk.js",
-    "static/js/2.3dd78b25.chunk.js.map": "/drainbbu/static/js/2.3dd78b25.chunk.js.map",
-    "index.html": "/drainbbu/index.html",
-    "precache-manifest.c90c71b221e0c2538042b8b8f23ef033.js": "/drainbbu/precache-manifest.c90c71b221e0c2538042b8b8f23ef033.js",
-    "service-worker.js": "/drainbbu/service-worker.js",
-    "static/css/2.b3a51b11.chunk.css.map": "/drainbbu/static/css/2.b3a51b11.chunk.css.map",
-    "static/css/main.51c7fd08.chunk.css.map": "/drainbbu/static/css/main.51c7fd08.chunk.css.map",
-    "static/js/2.3dd78b25.chunk.js.LICENSE.txt": "/drainbbu/static/js/2.3dd78b25.chunk.js.LICENSE.txt",
-    "static/media/Frame.png": "/drainbbu/static/media/Frame.244a536a.png",
-    "static/media/Model.scss": "/drainbbu/static/media/Water7.312ab15c.png",
-    "static/media/bbu.PNG": "/drainbbu/static/media/bbu.49ce0e7a.PNG",
-    "static/media/flood.jpg": "/drainbbu/static/media/flood.aaba0aaa.jpg"
+    "main.css": "/drain-ku-bbu/static/css/main.912c1390.chunk.css",
+    "main.js": "/drain-ku-bbu/static/js/main.8f9ff4b0.chunk.js",
+    "main.js.map": "/drain-ku-bbu/static/js/main.8f9ff4b0.chunk.js.map",
+    "runtime-main.js": "/drain-ku-bbu/static/js/runtime-main.a65951f2.js",
+    "runtime-main.js.map": "/drain-ku-bbu/static/js/runtime-main.a65951f2.js.map",
+    "static/css/2.b3a51b11.chunk.css": "/drain-ku-bbu/static/css/2.b3a51b11.chunk.css",
+    "static/js/2.45190c68.chunk.js": "/drain-ku-bbu/static/js/2.45190c68.chunk.js",
+    "static/js/2.45190c68.chunk.js.map": "/drain-ku-bbu/static/js/2.45190c68.chunk.js.map",
+    "index.html": "/drain-ku-bbu/index.html",
+    "precache-manifest.f7b7d313d5d8e26f2843570690421df7.js": "/drain-ku-bbu/precache-manifest.f7b7d313d5d8e26f2843570690421df7.js",
+    "service-worker.js": "/drain-ku-bbu/service-worker.js",
+    "static/css/2.b3a51b11.chunk.css.map": "/drain-ku-bbu/static/css/2.b3a51b11.chunk.css.map",
+    "static/css/main.912c1390.chunk.css.map": "/drain-ku-bbu/static/css/main.912c1390.chunk.css.map",
+    "static/js/2.45190c68.chunk.js.LICENSE.txt": "/drain-ku-bbu/static/js/2.45190c68.chunk.js.LICENSE.txt",
+    "static/media/Frame.png": "/drain-ku-bbu/static/media/Frame.244a536a.png",
+    "static/media/Model.scss": "/drain-ku-bbu/static/media/Water7.312ab15c.png",
+    "static/media/bbu.PNG": "/drain-ku-bbu/static/media/bbu.49ce0e7a.PNG",
+    "static/media/flood.jpg": "/drain-ku-bbu/static/media/flood.aaba0aaa.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2218cf2e.js",
+    "static/js/runtime-main.a65951f2.js",
     "static/css/2.b3a51b11.chunk.css",
-    "static/js/2.3dd78b25.chunk.js",
-    "static/css/main.51c7fd08.chunk.css",
-    "static/js/main.4073af53.chunk.js"
+    "static/js/2.45190c68.chunk.js",
+    "static/css/main.912c1390.chunk.css",
+    "static/js/main.8f9ff4b0.chunk.js"
   ]
 }
