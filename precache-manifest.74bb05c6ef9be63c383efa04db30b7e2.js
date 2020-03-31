@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "49390f91cbaac8e9ecfc2dd3548dc19e",
+    "revision": "bd53f399955f5567960f623ed4be7827",
     "url": "/drainbbu/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/drainbbu/static/css/2.b3a51b11.chunk.css"
   },
   {
-    "revision": "d87d405efc0f179b7886",
+    "revision": "406b3b813b99c98c0f0e",
     "url": "/drainbbu/static/css/main.51c7fd08.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/drainbbu/static/js/2.5fade35e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d87d405efc0f179b7886",
-    "url": "/drainbbu/static/js/main.cde2d2f5.chunk.js"
+    "revision": "406b3b813b99c98c0f0e",
+    "url": "/drainbbu/static/js/main.415e1b15.chunk.js"
   },
   {
     "revision": "9d77638bd4cdc8bd4f36",
