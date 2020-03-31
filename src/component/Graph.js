@@ -17,7 +17,7 @@ const Graph = (props) => {
           options={{
             title:{
               display:props.displayTitle,
-              text:props.text+' in '+props.location,
+              text:props.text+' at '+props.location,
               fontSize:25
             },
             legend:{
