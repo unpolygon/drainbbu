@@ -81,7 +81,7 @@ const SendGraph = () => {
       datasets:[{
         label: 'WlGraph',
         fill:false,
-        data: data.map(each => each.wlValue),
+        data: data.map(each => each.qValue), //switch with wlVAlue
         pointBackgroundColor: data.map((each,index) => 
           backgroundColor[(startIndex+index) % (backgroundColor.length)]),
         borderColor: backgroundColor[startIndex],
@@ -100,7 +100,7 @@ const SendGraph = () => {
       datasets:[{
         label: 'QGraph',
         fill:false,
-        data: data.map(each => each.qValue),
+        data: data.map(each => each.wlValue), //switch with qValue
         borderColor: backgroundColor[startIndex],
         pointBackgroundColor: data.map((each,index) => 
           backgroundColor[(startIndex+index) % backgroundColor.length])
