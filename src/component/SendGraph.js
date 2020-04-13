@@ -7,7 +7,7 @@ import { loadProgressBar } from 'axios-progress-bar'
 import 'axios-progress-bar/dist/nprogress.css'
 import $ from 'jquery';
 
-var month = ['Aug','Oct','Nov','Dec'];
+var month = ['Aug','Sep','Oct','Nov'];
 var ENDPOINT = 'https://drain-bbu.herokuapp.com/';
 
 const SendGraph = () => {
@@ -19,7 +19,7 @@ const SendGraph = () => {
   const [graphData, setGraphData] = useState([]);
   const [displayLegend,setDisplayLegend] = useState(true)
 
-
+  const [graphDate,setGraphDate] = useState('2017-08-03');
   const [wlChartData,setWlChartData] = useState({});
   const [rfChartData,setRfChartData] = useState({});
   const [qChartData,setQChartData] = useState({});
@@ -65,9 +65,8 @@ const SendGraph = () => {
 
   const onSelectedSituation = (index) => {
     if (graphData.length <= 0) return;
-
+    setGraphDate(graphData[index].date);
     let graphHeight = $('.Graph').height();
-    console.log('gh: ',graphHeight);
     if(graphHeight < 200) setDisplayLegend(false); 
     else setDisplayLegend(true);
 
@@ -142,6 +141,9 @@ const SendGraph = () => {
                 <div><p>Year:</p><SplitButton name='Year' options={optionsYear} index='0' className='buttonGroup'/></div>
                 <div><p>Month:</p><SplitButton name='Month' options={optionsMonth} monthCallback={v => setMonthValue(v)} index='0'/></div>
                 {onSelectedMonth()}
+        </div>
+        <div className='GraphDate'>
+          {graphDate}       
         </div>
         <Graph 
           chartData={rfChartData}

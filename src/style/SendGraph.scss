@@ -58,6 +58,15 @@ $color-bg-gradient: linear-gradient(108.9deg, #1541a8 4.9%, #78e8ad 97%);
         white-space: normal;
         margin: 2em auto;
     }
+    .GraphDate{
+        width: 100vw;
+        background-color: rgba(0, 206, 110, 0.698);
+        align-items: center;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        padding: .2em;
+    }
 }
 
 @media screen and (max-width: 768px){
