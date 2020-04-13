@@ -89,7 +89,7 @@ const SendGraph = () => {
           label: 'Reference line',
           fill:false,
           borderDash:[10,10],
-          data: Array(data.length).fill(1.97),
+          data: Array(data.length).fill(0.14),
           borderColor: backgroundColor[0],
           pointRadius: 0,
         }]
