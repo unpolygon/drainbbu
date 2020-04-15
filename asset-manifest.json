@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/drainbbu/static/css/main.51c7fd08.chunk.css",
-    "main.js": "/drainbbu/static/js/main.a9be3571.chunk.js",
-    "main.js.map": "/drainbbu/static/js/main.a9be3571.chunk.js.map",
+    "main.css": "/drainbbu/static/css/main.b0778569.chunk.css",
+    "main.js": "/drainbbu/static/js/main.40069643.chunk.js",
+    "main.js.map": "/drainbbu/static/js/main.40069643.chunk.js.map",
     "runtime-main.js": "/drainbbu/static/js/runtime-main.2218cf2e.js",
     "runtime-main.js.map": "/drainbbu/static/js/runtime-main.2218cf2e.js.map",
     "static/css/2.b3a51b11.chunk.css": "/drainbbu/static/css/2.b3a51b11.chunk.css",
-    "static/js/2.5fade35e.chunk.js": "/drainbbu/static/js/2.5fade35e.chunk.js",
-    "static/js/2.5fade35e.chunk.js.map": "/drainbbu/static/js/2.5fade35e.chunk.js.map",
+    "static/js/2.0257a9bb.chunk.js": "/drainbbu/static/js/2.0257a9bb.chunk.js",
+    "static/js/2.0257a9bb.chunk.js.map": "/drainbbu/static/js/2.0257a9bb.chunk.js.map",
     "index.html": "/drainbbu/index.html",
-    "precache-manifest.f5f260592908a39cd2216edc1b1a8e0a.js": "/drainbbu/precache-manifest.f5f260592908a39cd2216edc1b1a8e0a.js",
+    "precache-manifest.fb5fbe5a5417392303f5491c47cd4c7d.js": "/drainbbu/precache-manifest.fb5fbe5a5417392303f5491c47cd4c7d.js",
     "service-worker.js": "/drainbbu/service-worker.js",
     "static/css/2.b3a51b11.chunk.css.map": "/drainbbu/static/css/2.b3a51b11.chunk.css.map",
-    "static/css/main.51c7fd08.chunk.css.map": "/drainbbu/static/css/main.51c7fd08.chunk.css.map",
-    "static/js/2.5fade35e.chunk.js.LICENSE.txt": "/drainbbu/static/js/2.5fade35e.chunk.js.LICENSE.txt",
+    "static/css/main.b0778569.chunk.css.map": "/drainbbu/static/css/main.b0778569.chunk.css.map",
+    "static/js/2.0257a9bb.chunk.js.LICENSE.txt": "/drainbbu/static/js/2.0257a9bb.chunk.js.LICENSE.txt",
     "static/media/Frame.png": "/drainbbu/static/media/Frame.244a536a.png",
     "static/media/Model.scss": "/drainbbu/static/media/Water7.312ab15c.png",
     "static/media/bbu.PNG": "/drainbbu/static/media/bbu.49ce0e7a.PNG",
@@ -22,8 +22,8 @@
   "entrypoints": [
     "static/js/runtime-main.2218cf2e.js",
     "static/css/2.b3a51b11.chunk.css",
-    "static/js/2.5fade35e.chunk.js",
-    "static/css/main.51c7fd08.chunk.css",
-    "static/js/main.a9be3571.chunk.js"
+    "static/js/2.0257a9bb.chunk.js",
+    "static/css/main.b0778569.chunk.css",
+    "static/js/main.40069643.chunk.js"
   ]
 }
