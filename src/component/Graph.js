@@ -17,12 +17,42 @@ const Graph = (props) => {
           options={{
             title:{
               display:props.displayTitle,
-              text:props.text+' at '+props.location,
-              fontSize:25
+              text:props.title,
+              fontSize:(props.computer ? 25 : 15)
             },
             legend:{
-              display:props.displayLegend,
+              display:props.computer,
               position:props.legendPosition
+            },
+            scales: {
+              yAxes: [{
+                ticks: {
+                    beginAtZero:false,
+                    maxTicksLimit: (props.computer ? 10 : 5)                                             
+                },
+                scaleLabel: {
+                    display: true,
+                    labelString: (props.text.length > 15 && !props.computer ? 'The Amount' : props.text)
+
+                }
+              }],
+              xAxes: [{
+                ticks: {
+                    beginAtZero:false,     
+                    maxTicksLimit: (props.computer ? 20 : 10)                       
+                },
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Time'
+
+                }
+              }]         
+            }, 
+            layout: {
+              padding: {
+                  left: (props.computer ? 20 : 0),
+                  right: (props.computer ? 30: 0),
+              }
             }
           }}
         />

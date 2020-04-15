@@ -1,7 +1,8 @@
 import React,{useEffect, useState} from 'react';
 import axios from 'axios';
 
-var RfGraph = require('../algorithm/rf.json');
+var RfGraph = require('../algorithm/allData.json');
+var ENDPOINT = 'https://drain-bbu.herokuapp.com/';
 
 const AddGraphPage = () => {
     useEffect(() => {
@@ -26,7 +27,7 @@ const AddGraphPage = () => {
                         'wlValue':sitEach.wlValue
             }
             // console.log(Graph_JSON);
-            await axios.post('http://localhost:5000/AddGraph/add', Graph_JSON)
+            await axios.post(ENDPOINT+'AddGraph/add', Graph_JSON)
             .then(res => console.log(res.data)).catch(err => console.log('Error: '+err));
             }
             
