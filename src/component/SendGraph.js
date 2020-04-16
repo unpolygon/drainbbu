@@ -17,7 +17,8 @@ const SendGraph = () => {
   const [monthValue, setMonthValue] = useState(8);
   const [countValue, setCountValue] = useState([1]);
   const [graphData, setGraphData] = useState([]);
-  const [computer,setComputer] = useState(true)
+  const [computer,setComputer] = useState(true);
+  const [indexSituation, setIndexSituation] = useState(0);
 
   const [graphDate,setGraphDate] = useState('2017-08-14');
   const [wlChartData,setWlChartData] = useState({});
@@ -81,7 +82,7 @@ const SendGraph = () => {
     
     let startIndex = Math.floor(Math.random() * backgroundColor.length-1)+1;
     setWlChartData({
-      labels: data.map((each,index) => {if(index%2 == 0) return each.time.slice(0,5); else return '';}),
+      labels: data.map(each => each.time.slice(0,5)),
       datasets:[{
         label: 'Water Level (m)',
         fill:false,
@@ -100,7 +101,7 @@ const SendGraph = () => {
     })
     startIndex = Math.floor(Math.random() * backgroundColor.length);
     setQChartData({
-      labels: data.map((each,index) => {if(index%2 == 0) return each.time.slice(0,5); else return '';}),
+      labels: data.map(each => each.time.slice(0,5)),
       datasets:[{
         label: 'Discharge (m/s)',
         fill:false,
@@ -139,7 +140,7 @@ const SendGraph = () => {
       <div>
         <p>Situation:</p>
         <SplitButton 
-          name='Year' 
+          // name='Year' 
           options={Array(count).fill(1).map((each,index) => index+1)} 
           index='0'
           sitCallback={onSelectedSituation}  
