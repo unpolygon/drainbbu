@@ -7,7 +7,7 @@ import { loadProgressBar } from 'axios-progress-bar'
 import 'axios-progress-bar/dist/nprogress.css'
 import $ from 'jquery';
 
-var month = ['Aug','Oct','Nov','Dec'];
+var month = ['Aug','Sep','Oct','Nov'];
 var ENDPOINT = 'https://drain-bbu.herokuapp.com/';
 
 const SendGraph = () => {
@@ -17,9 +17,10 @@ const SendGraph = () => {
   const [monthValue, setMonthValue] = useState(8);
   const [countValue, setCountValue] = useState([1]);
   const [graphData, setGraphData] = useState([]);
-  const [displayLegend,setDisplayLegend] = useState(true)
+  const [computer,setComputer] = useState(true);
+  const [indexSituation, setIndexSituation] = useState(0);
 
-
+  const [graphDate,setGraphDate] = useState('2017-08-14');
   const [wlChartData,setWlChartData] = useState({});
   const [rfChartData,setRfChartData] = useState({});
   const [qChartData,setQChartData] = useState({});
@@ -43,6 +44,10 @@ const SendGraph = () => {
     onSelectedSituation(0);
   },[graphData]);
 
+  useEffect(() => {
+    console.log("Situation Changed!")
+  },[graphDate]);
+
   function getChartData(){
     console.log('getChart');
 
@@ -65,21 +70,21 @@ const SendGraph = () => {
 
   const onSelectedSituation = (index) => {
     if (graphData.length <= 0) return;
-
     let graphHeight = $('.Graph').height();
-    console.log('gh: ',graphHeight);
-    if(graphHeight < 200) setDisplayLegend(false); 
-    else setDisplayLegend(true);
+    setComputer(graphHeight >= 200);
 
     let firstCountGraphData = graphData[0].count;
     let data = graphData.filter(each => each.count == firstCountGraphData+index);
+    setGraphDate(data[0].date);
+    // console.log('date: ',graphDate,graphData[index].date);
+
     console.log(data);
     
     let startIndex = Math.floor(Math.random() * backgroundColor.length-1)+1;
     setWlChartData({
       labels: data.map(each => each.time.slice(0,5)),
       datasets:[{
-        label: 'WlGraph',
+        label: 'Water Level (m)',
         fill:false,
         data: data.map(each => each.wlValue),
         pointBackgroundColor: data.map((each,index) => 
@@ -89,7 +94,7 @@ const SendGraph = () => {
           label: 'Reference line',
           fill:false,
           borderDash:[10,10],
-          data: Array(data.length).fill(1),
+          data: Array(data.length).fill(0.14),
           borderColor: backgroundColor[0],
           pointRadius: 0,
         }]
@@ -98,7 +103,7 @@ const SendGraph = () => {
     setQChartData({
       labels: data.map(each => each.time.slice(0,5)),
       datasets:[{
-        label: 'QGraph',
+        label: 'Discharge (m/s)',
         fill:false,
         data: data.map(each => each.qValue),
         borderColor: backgroundColor[startIndex],
@@ -110,13 +115,21 @@ const SendGraph = () => {
     setRfChartData({
       labels: data.map(each => each.time.slice(0,5)),
       datasets:[{
-        label: 'RfGraph',
+        label: 'Accumulated Rain Fall 1 Hr (mm.)',
         fill:false,
         data: data.map(each => each.rfValue),
         pointBackgroundColor: data.map((each,index) => 
           backgroundColor[(startIndex+index) % backgroundColor.length]),
         borderColor: backgroundColor[startIndex],
-        }]
+        }],
+        options: {
+          scale: {
+              ticks: {
+                  suggestedMin: 50,
+                  suggestedMax: 100
+              }
+          }
+      }
     })
   }
 
@@ -127,7 +140,7 @@ const SendGraph = () => {
       <div>
         <p>Situation:</p>
         <SplitButton 
-          name='Year' 
+          // name='Year' 
           options={Array(count).fill(1).map((each,index) => index+1)} 
           index='0'
           sitCallback={onSelectedSituation}  
@@ -143,26 +156,32 @@ const SendGraph = () => {
                 <div><p>Month:</p><SplitButton name='Month' options={optionsMonth} monthCallback={v => setMonthValue(v)} index='0'/></div>
                 {onSelectedMonth()}
         </div>
+        <div className='GraphDate'>
+          {graphDate}       
+        </div>
         <Graph 
           chartData={rfChartData}
           text = 'The Amount of Rain Fall'
+          title = 'Accumulated Rain Fall 1 Hr (mm.) - 2017'
           location="BBU" 
           legendPosition="bottom"
-          displayLegend = {displayLegend}
+          computer = {computer}
         />
         <Graph 
           chartData={qChartData} 
-          text = 'Flow Rate'
+          text = 'Discharge (m/s)'
+          title = 'Discharge (m/s) - 2017'
           location="BBU" 
           legendPosition="bottom"
-          displayLegend = {displayLegend}
+          computer = {computer}
           />
         <Graph 
           chartData={wlChartData} 
-          text="Water Level" 
+          text="Water Level (m)" 
+          title = 'Water Level (m) - 2017'
           location="BBU" 
           legendPosition="bottom"
-          displayLegend = {displayLegend}
+          computer = {computer}
         />
       </div>
     );
