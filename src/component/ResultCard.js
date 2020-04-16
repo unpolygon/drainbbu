@@ -15,14 +15,9 @@ const ResultCard = (props) => {
     const [tDrain,setTDrain] = useState(0);
     const [chkshow,setChkshow] = useState(false);
     const [show,setshow] = useState(true);
-    // const [chkFalse,setChkFalse] = useState(false);
-    // console.log({v1});
+    // in our code "sumTimeMax" that same as "sum_rain_tomax" or "sum_rain_drain"
 
     useEffect(() => {
-        
-        // formularV2(v1,sumTimeMax);
-        // callBackMaxV1(maxV1);
-        // callBackMinV1(minV1);
     });
     
     const formularV2 = (v1,sumTimeMax) => {
@@ -42,14 +37,20 @@ const ResultCard = (props) => {
     
     const formularTMax = (v2, sumTimeMax) => {
         props.v2(v2);
-        let tMax = (101.3988 + (0.1834 * sumTimeMax) + (251.4515*v2))/60;
+        let tMax = (101.3988 + (0.1834 * sumTimeMax) + (251.4515*(v2-v1)))/60;
         setTMax(tMax);
         props.tMax(tMax)
     }
     
     const formularTDrain = (v2, sumTimeMax) => {
-        let tDrain = (-220.1987 + (6.8215 * sumTimeMax) + (3432.8134 * v2))/60;
-        setTDrain(tDrain);
+        if (v2 > 0.14){
+            let tDrain = (-220.1987 + (6.8215 * sumTimeMax) + (3432.8134 * v2))/60;
+            setTDrain(tDrain);
+        }
+        else {
+            let tDrain = 0;
+            setTDrain(tDrain);
+        }
         props.tDrain(tDrain)
     }
     

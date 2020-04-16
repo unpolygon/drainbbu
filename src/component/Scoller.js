@@ -21,9 +21,9 @@ const Scoller = (props) => {
         <div className='Scoller'>
             <input type='range' 
                 onChange={handleOnChange} 
-                min ={props.v1 ? '-0.4' : '0'} 
-                max ={props.v1 ? '0.8' : '1200'} 
-                step= {props.v1 ? '0.1' : '25'} 
+                min ={props.v1 ? '-0.4' : '5'} 
+                max ={props.v1 ? '0.4' : '500'} 
+                step= {props.v1 ? '0.1' : '15'} 
                 defaultValue={props.v1 ? '0' : '0'}
                 list="ticks"
                 />

@@ -14,8 +14,6 @@ const Model = (props) => {
     let place = props.place;
     let chkshow = props.chkshow;
     let show = props.show;
-    const [chkHr , setChkHr ] = useState(false);
-    const [chkMin , setChkMin ] = useState(true);
     let col = '' ;
     console.log('v2-wtf-1 ',v2);
     console.log('v1-wtf-1 ',v1);
@@ -50,48 +48,31 @@ const Model = (props) => {
 
         if(chkshow==true){
             console.log('Model_tMax : ',tMax);
-                if(tMax > 59){
-                    let timeValuetMax = (document.getElementById('tMax'))/60;
-                    console.log('Model_tMax : ',tMax);
-                    console.log('up_Hr');
-                    setChkHr(true)
-                    setChkMin(false)
-                    timeValuetMax.innerHTML = ((props.tMax)/60).toFixed(2);
-                }
-                else{
-                    let timeValuetMax = document.getElementById('tMax');
-                    console.log('up_min');
-                    setChkMin(true)
-                    setChkHr(false)
-                    timeValuetMax.innerHTML = props.tMax.toFixed(2);
-                }
-        }else if(chkshow==false){
+                let timeValuetMax = document.getElementById('tMax');
+                console.log('Model_tMax : ',tMax);
+                console.log('up_Hr');
+                timeValuetMax.innerHTML = (props.tMax).toFixed(2);
+            }
+        else if(chkshow==false){
             console.log('down');
             console.log('Model_tDrain : ',tDrain);
-                if(tDrain > 59){
-                    let timeValuetDrain = document.getElementById('tDrain');
-                    setChkHr(true)
-                    setChkMin(false)
-                    console.log('down_Hr');
-                    console.log('Model_tDrain : ',tDrain);
-                    timeValuetDrain.innerHTML = ((props.tDrain)/60).toFixed(2);
-                }
-                else{
-                    let timeValuetDrain = (document.getElementById('tDrain'));
-                    setChkMin(true)
-                    setChkHr(false)
-                    console.log('down_min');
-                    timeValuetDrain.innerHTML = props.tDrain.toFixed(2);
-                }
-        }
+                let timeValuetDrain = document.getElementById('tDrain');
+                console.log('down_Hr');
+                console.log('Model_tDrain : ',tDrain);
+                timeValuetDrain.innerHTML = (props.tDrain).toFixed(2);
+            }
 
-            if(v2 > 1.85 && (chkshow || show) ){
+            if(v2 > 0.14 && (chkshow || show) ){
                 labelNumber.addClass('ShowValue-high');
                 document.getElementById('statusColor').innerHTML = "น้ำท่วมถนน!!";
-            }else if(v2 > 1.3 && (chkshow || show) ){
+            }else if(v2 > 0 && (chkshow || show) ){
                 labelNumber.addClass('ShowValue-middle');
                 labelNumber.removeClass('ShowValue-high');
                 document.getElementById('statusColor').innerHTML = "น้ำใกล้ท่วมถนนแล้ว!";
+            }else if(v1 > 0.14 && (chkshow || show) ){
+                labelNumber.addClass('ShowValue-middle');
+                labelNumber.removeClass('ShowValue-high');
+                document.getElementById('statusColor').innerHTML = "ระดับน้ำสูงกว่าค่าวิกฤติ!";
             }else if(v2 > -0.4 && (chkshow || show) ){
                 labelNumber.removeClass('ShowValue-middle');
                 labelNumber.removeClass('ShowValue-high');
@@ -131,8 +112,7 @@ const Model = (props) => {
                                     <div className='coverTimeValue'>
                                         {chkshow && <span id = "tMax" className='timeValue'>0.5</span>}
                                         {show && <span id = "tDrain" className='timeValue'>0.5</span>}
-                                        {chkMin &&<span className='unit'> min</span>}
-                                        {chkHr &&<span className='unit'> Hr</span>}
+                                        <span className='unit'> Hr</span>
                                     </div>
                             </div>
                             }
@@ -144,8 +124,7 @@ const Model = (props) => {
                     <div className='coverTimeValue'>
                         {chkshow && <span id = "tMax" className='timeValue'>0.5</span>}
                         {show && <span id = "tDrain" className='timeValue'>0.5</span>}
-                        {chkMin &&<span className='unit'> min</span>}
-                        {chkHr &&<span className='unit'> Hr</span>}
+                        <span className='unit'> Hr</span>
                     </div>
                 </div>}
 
