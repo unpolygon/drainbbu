@@ -85,7 +85,7 @@ const SendGraph = () => {
       datasets:[{
         label: 'Water Level (m)',
         fill:false,
-        data: data.map(each => each.qValue), //switch with wlVAlue
+        data: data.map(each => each.wlValue),
         pointBackgroundColor: data.map((each,index) => 
           backgroundColor[(startIndex+index) % (backgroundColor.length)]),
         borderColor: backgroundColor[startIndex],
@@ -104,7 +104,7 @@ const SendGraph = () => {
       datasets:[{
         label: 'Discharge (m/s)',
         fill:false,
-        data: data.map(each => each.wlValue), //switch with qValue
+        data: data.map(each => each.qValue),
         borderColor: backgroundColor[startIndex],
         pointBackgroundColor: data.map((each,index) => 
           backgroundColor[(startIndex+index) % backgroundColor.length])
