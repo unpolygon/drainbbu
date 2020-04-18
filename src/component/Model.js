@@ -52,16 +52,6 @@ const Model = (props) => {
                 console.log('Model_tMax : ',tMax);
                 console.log('up_Hr');
                 timeValuetMax.innerHTML = (props.tMax).toFixed(2);
-            }
-        else if(chkshow==false){
-            console.log('down');
-            console.log('Model_tDrain : ',tDrain);
-                let timeValuetDrain = document.getElementById('tDrain');
-                console.log('down_Hr');
-                console.log('Model_tDrain : ',tDrain);
-                timeValuetDrain.innerHTML = (props.tDrain).toFixed(2);
-            }
-
             if(v2 > 0.14 && (chkshow || show) ){
                 labelNumber.addClass('ShowValue-high');
                 document.getElementById('statusColor').innerHTML = "น้ำท่วมถนน!!";
@@ -77,6 +67,23 @@ const Model = (props) => {
                 labelNumber.removeClass('ShowValue-middle');
                 labelNumber.removeClass('ShowValue-high');
                 document.getElementById('statusColor').innerHTML = "ระดับน้ำปกติ";
+                }
+            }
+        else if(chkshow==false){
+            console.log('down');
+            console.log('Model_tDrain : ',tDrain);
+                let timeValuetDrain = document.getElementById('tDrain');
+                console.log('down_Hr');
+                console.log('Model_tDrain : ',tDrain);
+                timeValuetDrain.innerHTML = (props.tDrain).toFixed(2);
+                if(v1 > 0.14 && (chkshow || show) ){
+                    labelNumber.addClass('ShowValue-high');
+                    document.getElementById('statusColor').innerHTML = "ระดับน้ำสูงกว่าค่าวิกฤติ!";
+                }else if(v1 > -0.4 && (chkshow || show) ){
+                    labelNumber.removeClass('ShowValue-middle');
+                    labelNumber.removeClass('ShowValue-high');
+                    document.getElementById('statusColor').innerHTML = "ระดับน้ำปกติ";
+                }
             }
         console.log('v2-wtf ',v2);
     });
@@ -107,24 +114,24 @@ const Model = (props) => {
             </div>
                 {chkshow && 
                             <div className = "setCard">
-                                    <span>เวลาที่ฝนตกจนน้ำเต็มตลิ่ง : </span>
+                                    <span>ระยะเวลาที่ทำให้ระดับน้ำขึ้น : </span>
                                     &nbsp;
                                     <div className='coverTimeValue'>
                                         {chkshow && <span id = "tMax" className='timeValue'>0.5</span>}
                                         {show && <span id = "tDrain" className='timeValue'>0.5</span>}
-                                        <span className='unit'> Hr</span>
+                                        <span className='unit'> ชั่วโมง</span>
                                     </div>
                             </div>
                             }
 
                 {show && 
                 <div className = "setCard">
-                    <span>เวลาที่ระบายน้ำจนเสร็จ :</span>
+                    <span>ระยะเวลาที่ระบายน้ำจนเสร็จ :</span>
                     &nbsp;
                     <div className='coverTimeValue'>
                         {chkshow && <span id = "tMax" className='timeValue'>0.5</span>}
                         {show && <span id = "tDrain" className='timeValue'>0.5</span>}
-                        <span className='unit'> Hr</span>
+                        <span className='unit'> ชั่วโมง</span>
                     </div>
                 </div>}
 
