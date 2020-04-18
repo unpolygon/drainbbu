@@ -2,7 +2,7 @@ import React,{useEffect , useState} from 'react';
 import { NavLink } from 'react-router-dom';
 import '../style/NavBar.scss'
 import $ from 'jquery';
-
+import LOGO from '../asset/LOGO.png';
 const NavBar = () => {
     const [showButtonNav,setButtonNav] = useState(false);
     const [showNavB,setNavB] = useState(true);
@@ -20,7 +20,11 @@ const NavBar = () => {
 
     return(
         <div className='NavBar'>
-            <a href = "/" className='Logo'>DrainBBU</a>
+            <div className='Logopic'style={{display:'flex'}}>
+            <img src={LOGO}  height="80px" width="80px" />
+          
+            <a href = "/" className='Logo' style={{color:'white',marginTop:'0.27em'}}>DrainBBU</a>
+            </div>
             {/* <div className='Menu-toggle'></div> */}
             <nav>
                 <ul  id='NavBar_button'>

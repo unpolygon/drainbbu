@@ -12,6 +12,7 @@ import BBU from '../asset/bbu.PNG'
 import Flood from '../asset/flood.jpg'
 import Panel from '../component/panel.js'
 import $ from 'jquery';
+import SourceBBU from '../component/SourceBBU';
 
 
 
@@ -34,6 +35,7 @@ const OverviewPage = () => {
 });
     return(
     <div className ='OverviewPage'>
+    <SourceBBU/>
     <div style={{display:'flex',marginTop:'50px'}}>
     <div style={{background:"linear-gradient(90deg, rgba(53,61,107,1) 20%, rgba(62,171,168,1) 56%, rgba(234,244,148,1) 87%, rgba(255,211,106,1) 100%)",height:'5px',width:'100%',marginTop:'15px'}}></div>
     &nbsp;&nbsp;&nbsp;

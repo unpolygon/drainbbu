@@ -5,14 +5,14 @@ $bg_button: #6256e536;
     height: 6em;
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    .Logo{
+    .Logopic{
         margin-left: 6%;
         color: white;
         font-family: 'Prompt', sans-serif;
         height: 60px;
         font-size: 1.6978rem;
         line-height: 60px;
-        margin-top: 0.26em ;
+       
         padding : 0 20px;
         //background: grey;
         text-align: center;
@@ -57,11 +57,12 @@ $bg_button: #6256e536;
             transition: all 0.5s ease;
         }
     }
+  
 }
 
-@media (max-width: 530px){
+@media (max-width: 630px){
     .NavBar{
-        .Logo{
+        .Logopic{
             margin-left: 0;
         }
         .Burger{
@@ -114,3 +115,4 @@ $bg_button: #6256e536;
         }
     }
 }
+
