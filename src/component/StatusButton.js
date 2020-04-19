@@ -60,8 +60,8 @@ const StatusButton = (props) => {
     
         return (
             <div className="StatusButton">
-                {chkshow && <Button style={{background: "#668DBB", boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }} onClick={ToggleDiv}>โหมดจำลองน้ำขึ้น</Button>}
-                        {show && <Button color = "danger" style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"}} onClick={ToggleDiv}>โหมดจำลองน้ำลง</Button>}
+                {chkshow && <Button style={{background: "#668DBB", boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }} onClick={ToggleDiv}>เปลี่ยนเป็นโหมดจำลองน้ำขึ้น</Button>}
+                        {show && <Button color = "danger" style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"}} onClick={ToggleDiv}>เปลี่ยนเป็นโหมดจำลองน้ำลง</Button>}
                         {/* &nbsp;
                         {show && 
                         <div className = "setCard">
