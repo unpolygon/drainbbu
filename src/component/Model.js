@@ -27,17 +27,14 @@ const Model = (props) => {
             labelNumber.find('span').text(v1);
             pos = ((v1-minV1)/(maxV1-minV1))*100;
             $('.Water').attr('data-content',v1+' m');
-            console.log("Model_v1 : ",v1);
             let waterpos = pos;
-            console.log('pos: ',pos);
             if(pos < 0) pos = 0
             if(pos > 100) pos = 100
-            console.log('Intouch')
             labelNumber.css('bottom',pos+'%');
             water.css({'top':`${100-waterpos}%`,'transition-duration': '1s'});
         }
         if(typeof(chkshow) === "boolean"){
-            let x = (chkshow ? v2: v1);
+            let x = (chkshow ? v2: (v2 >= 0.14 ? 0.14 : v1 ));
             pos = ((x-minV1)/(maxV1-minV1))*100;
             flipShowWl();
             $('.Water').attr('data-content',x+' m');
