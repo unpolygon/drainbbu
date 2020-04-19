@@ -35,8 +35,8 @@ const SlideValue = (props) => {
     <div className='SlideValue'>
       <span>ระดับน้ำเริ่มต้น (เมตร)</span>
       <Scoller v1={callBackV1} maxV1={callBackMaxV1} minV1={callBackMinV1}/>
-      {show && <span>ปริมาณฝนสะสมก่อนน้ำขึ้นสูงสุด (มม.)</span>}
-      {chkshow && <span>ปริมาณฝนสะสมหลังน้ำขึ้นสูงสุด (มม.)</span>}
+      {show && <span>ปริมาณฝนสะสมราย 1 ชั่วโมงก่อนน้ำขึึ้นสูงสุด (มม.)</span>}
+      {chkshow && <span>ปริมาณฝนสะสมราย 1 ชั่วโมงหลังจากน้ำขึึ้นสูงสุด (มม.)</span>}
       <Scoller sumTimeMax={callBackSumTimeMax}/>
     </div>
   );
