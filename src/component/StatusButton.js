@@ -11,8 +11,11 @@ const StatusButton = (props) => {
     let tMax = parseInt(props.tMax);
     let tDrain = parseInt(props.tDrain);
     let place = props.place;
+    let chkcritical = props.chkcritical;
     const [show , setshow] = useState(false);
     const [chkshow , setChkshow ] = useState(true);
+    const [showReset , setshowReset] = useState(undefined);
+    const [hideToReset , sethideToReset] = useState(true);
     let hold = false ; 
     let col = '' ;
     
@@ -34,8 +37,20 @@ const StatusButton = (props) => {
         $(document).ready(() => {
             setshow(!show)
             setChkshow(!chkshow)
-                console.log('chkshow',chkshow);
-                console.log('show',show);
+            console.log("StatusBT_chkcritical : ",chkcritical);
+            // if(chkshow == true){
+            //     console.log("StatusBT_chkCritical : ",chkcritical);
+            //     let showReset = true ;
+            //     setshowReset(showReset);
+            //     let hideToReset = false;
+            //     sethideToReset(hideToReset);
+            // }
+            if(show == true){
+                let showReset = true ;
+                setshowReset(showReset);
+                let hideToReset = false;
+                sethideToReset(hideToReset);
+            }
             // console.log(props.tDrain);
             // if(!show){
             //     let timeValuetMax = document.getElementById('tMax');
@@ -51,6 +66,9 @@ const StatusButton = (props) => {
             // }
         })  
     }
+    const ToReset = () =>{
+        window.location.reload()
+    }
     // const callBackchkshow = (chkshow) => {
     //     setChkshow(chkshow);
     //     props.chkshow(chkshow)
@@ -60,8 +78,9 @@ const StatusButton = (props) => {
     
         return (
             <div className="StatusButton">
-                {chkshow && <Button style={{background: "#668DBB", boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }} onClick={ToggleDiv}>เปลี่ยนเป็นโหมดจำลองน้ำขึ้น</Button>}
-                        {show && <Button color = "danger" style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"}} onClick={ToggleDiv}>เปลี่ยนเป็นโหมดจำลองน้ำลง</Button>}
+                {chkshow && hideToReset && <Button style={{background: "#668DBB", boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }} onClick={ToggleDiv}>เปลี่ยนเป็นโหมดจำลองน้ำขึ้น</Button>}
+                        {show && chkcritical && <Button color = "danger" style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"}} onClick={ToggleDiv}>เปลี่ยนเป็นโหมดจำลองน้ำลง</Button>}
+                        {(showReset || !chkcritical) && <Button color="info" style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"}} onClick={ToReset}>รีเซ็ตค่า</Button>}
                         {/* &nbsp;
                         {show && 
                         <div className = "setCard">

@@ -12,9 +12,10 @@ const ResultCard = (props) => {
     const [minV1,setMinV1] = useState(0);
     const [maxV1,setMaxV1] = useState(0);
     const [tMax,setTMax] = useState(0);
-    const [tDrain,setTDrain] = useState(0);
+    const [tDrain,setTDrain] = useState(undefined);
     const [chkshow,setChkshow] = useState(false);
     const [show,setshow] = useState(true);
+    const [chkcritical,setchkcritical] = useState(true);
     // in our code "sumTimeMax" that same as "sum_rain_tomax" or "sum_rain_drain"
 
     useEffect(() => {
@@ -42,14 +43,17 @@ const ResultCard = (props) => {
         props.tMax(tMax)
     }
     
-    const formularTDrain = (v2, sumTimeMax) => {
+    const formularTDrain = (v2,show) => {
         if (v2 > 0.14){
-            let tDrain = (-220.1987 + (6.8215 * sumTimeMax) + (3432.8134 * v2))/60;
+            let tDrain = (-220.1987 + (3432.8134 * v2))/60;
             setTDrain(tDrain);
         }
-        else {
+        else if (v2 <=0.14 && chkshow == true) {
             let tDrain = 0;
             setTDrain(tDrain);
+            let chkcritical = false;
+            setchkcritical(chkcritical);
+            console.log("chkCritical : ",chkcritical);
         }
         props.tDrain(tDrain)
     }
@@ -89,13 +93,13 @@ const ResultCard = (props) => {
             </div>
             <div className="boxshadow">
                     &nbsp;
-                    <SlideValue 
+                    {chkcritical && <SlideValue 
                         formularV2={formularV2}
                         minV1 = {callBackMinV1}
                         maxV1 = {callBackMaxV1}
                         chkshow = {chkshow}
                         show = {show}
-                        />
+                        />}
                     <StatusButton 
                     v1={v1}
                     maxV1={maxV1}
@@ -104,9 +108,11 @@ const ResultCard = (props) => {
                     tMax={tMax}
                     tDrain={tDrain}
                     place={props.place}
+                    chkcritical = {chkcritical}
                     chkshow={callBackchkshow}
                     show={callBackshow}
                     />
+                    
                      &nbsp;
                 </div>
         </div>
