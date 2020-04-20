@@ -7,7 +7,7 @@ import { loadProgressBar } from 'axios-progress-bar'
 import 'axios-progress-bar/dist/nprogress.css'
 import $ from 'jquery';
 
-var month = ['Aug','Sep','Oct','Nov'];
+var month = ['Aug','Sep','Oct'];
 var ENDPOINT = 'https://drain-bbu.herokuapp.com/';
 
 const SendGraph = () => {
