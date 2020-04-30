@@ -12,7 +12,7 @@ function App() {
   
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get('http://localhost:3000/api')
+      const response = await axios.get('opendata-app.hii.or.th/water-api')
       setData(response.data)
     }
 
