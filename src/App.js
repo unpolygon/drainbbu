@@ -1,12 +1,25 @@
-import React from 'react';
+import React , {useEffect , useState} from 'react';
 import HomePage from './page/Home.page';
 import NavBar from './component/NavBar';
 import GraphPage from './page/Graph.page';
 import OverviewPage from './page/Overview.page';
 import AddPage from './page/AddGraph.page';
+import axios from 'axios';
 import { Link, BrowserRouter as Router, Route, Switch , HashRouter} from 'react-router-dom';
 
 function App() {
+  const [data, setData] = useState({})
+  
+  useEffect(() => {
+    async function fetchData() {
+      const response = await axios.get('http://localhost:3000/api')
+      setData(response.data)
+    }
+
+    fetchData()
+    return () => {}
+  }, [])
+
   return (
     <HashRouter basename='/'>
       <div className="App">

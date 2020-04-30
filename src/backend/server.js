@@ -10,7 +10,7 @@ const port = process.env.PORT || 6000;
 app.use(cors());
 app.use(express.json());
 
-app.get('/',function(req,res){
+app.get('/water-api',function(req,res){
     res.send('this is the homepage');
 });
 
